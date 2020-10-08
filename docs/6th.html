@@ -1,0 +1,551 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title></title><link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857143; overflow-x: hidden; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; tab-size: 4; background-position: inherit inherit; background-repeat: inherit inherit; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; word-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 40px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) { 
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font-family: inherit; font-size: inherit; font-style: inherit; font-variant-caps: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right-width: 0px; background-color: inherit; }
+.CodeMirror-linenumber { }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; position: relative !important; background-position: inherit inherit; background-repeat: inherit inherit; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; background-position: 0px 0px; background-repeat: initial initial; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print { 
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  html.blink-to-pdf { font-size: 13px; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background-color: rgb(204, 204, 204); display: block; overflow-x: hidden; background-position: initial initial; background-repeat: initial initial; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) { 
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background-color: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; background-position: initial initial; background-repeat: initial initial; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; }
+a.md-print-anchor { white-space: pre !important; border: none !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; text-shadow: initial !important; background-position: 0px 0px !important; background-repeat: initial initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
+.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom-width: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+svg[id^="mermaidChart"] { line-height: 1em; }
+mark { background-color: rgb(255, 255, 0); color: rgb(0, 0, 0); background-position: initial initial; background-repeat: initial initial; }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
+@media print { 
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+/* open-sans-regular - latin-ext_latin */
+  /* open-sans-italic - latin-ext_latin */
+    /* open-sans-700 - latin-ext_latin */
+    /* open-sans-700italic - latin-ext_latin */
+  html {
+    font-size: 16px;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+
+/*@media print {
+    .typora-export h1,
+    .typora-export h2 {
+        border-bottom: none;
+        padding-bottom: initial;
+    }
+
+    .typora-export h1::after,
+    .typora-export h2::after {
+        content: "";
+        display: block;
+        height: 100px;
+        margin-top: -96px;
+        border-top: 1px solid #eee;
+    }
+}*/
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #dfe2e5;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border-top: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table tr th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table tr td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table tr th:first-child,
+table tr td:first-child {
+    margin-top: 0;
+}
+table tr th:last-child,
+table tr td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+    background-color: #f3f4f4;
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+    pre {
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+.html-for-mac .context-menu {
+    --item-hover-bg-color: #E6F0FE;
+}
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+ .typora-export li, .typora-export p, .typora-export,  .footnote-line {white-space: normal;} 
+</style>
+</head>
+<body class='typora-export'>
+<div id='write'  class=''><h2><a name="精神现象学读书笔记六）------超越内卷的出路在哪-paid" class="md-header-anchor"></a><span>《精神现象学》读书笔记（六）——超越内卷的出路在哪？ Paid</span></h2><p><span>Original 千叶映 死理性派 </span><em><span>8/3</span></em></p><p><span>收录于话题:   </span><em><span>文化   历史  心理</span></em><span> </span></p><p><span>　　本篇是读书笔记的第六篇，涉及的内容是185-244页，即主人与奴隶的三个环节：“统治”（185页），“恐惧”（208页）与“教养和赋形”（218页）。</span></p><p>&nbsp;</p><p><strong><a href='http://mp.weixin.qq.com/s?__biz=MzA5OTQ1NDY2Mg==&amp;mid=2653761444&amp;idx=1&amp;sn=d6f43b581a25ff188c726ab944bd417c&amp;chksm=8b5b940dbc2c1d1bd81effe243c03cc64404a8dade3990a57b4b392bebe973595ffe54ebe6ad&amp;scene=21#wechat_redirect'><span>《精神现象学》读书笔记（五）——过于在意他人的评价怎么办？</span></a>
+</strong></p><p><strong><a href='http://mp.weixin.qq.com/s?__biz=MzA5OTQ1NDY2Mg==&amp;mid=2653761436&amp;idx=1&amp;sn=345485fb9f733ec6f8cb8de2ed8cf2b7&amp;chksm=8b5b9435bc2c1d232f81045d17d82f2be28117c08b2f789be75b241c06c0c1b1f9f2dec1d65b&amp;scene=21#wechat_redirect'><span>《精神现象学》读书笔记（四）——怎样理解自己内心的欲望？</span></a>
+</strong></p><p><span> </span></p><p><span>　　我认为，哲学是在每一个人身上都存在的学问，不管一个人看没看过哲学书，TA自在地就是哲学本身，正如黑格尔在《小逻辑》中说的：人是天生的形而上学家。虽然对概念进行严谨的思考是极为重要的，但哲学如果没有生命体验作为底色，没有结合自己内心深处最想问的问题，没有和自己的人生相结合，那么这样的哲学就只是一种僵死的、没有灵魂的技术化的学问而已。因此在这一篇中，我还是想把重点放在生活中的例子上。</span></p><p>&nbsp;</p><p><img src="https://mmbiz.qpic.cn/mmbiz_jpg/o0l82FZys04jHyvbyIGElTtQGNx7QLeeXeMrHF9VLGicwbMmQNmcC6TZvBG74VoEuHhCmPhvcuZdeKvGzwjv7IQ/640?wx_fmt=jpeg&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" referrerpolicy="no-referrer" alt="img"></p><p>&nbsp;</p><p><span>　　今天的中文互联网上，存在着一种自贬自抑、互相侮辱的氛围，像“做题家”、“社畜”、“房奴”这样恶劣的词汇层出不穷，这其实也是人们内心中那种低价值感和无助感的写照。无助的根源在于个人的价值总是不得不通过他人来定义：判断你是不是厉害，就看你超越了百分之几的人，这样一种定义方式造成的是</span><strong><span>所有人在精神上都处于匮乏状态</span></strong><span>，且这种匮乏状态不可能通过外在的努力或者增大总利益得到彻底缓解。</span></p><p><span> </span></p><p><span>　　我以为，黑格尔对主奴关系的思辨对于今天如何超越内卷的思维方式，发现精神的自由有着极为重要的意义。需要强调的是，我们不应当把《精神现象学》中的主奴关系仅仅局限于历史上的奴隶制社会，而应当看到，黑格尔在此更多地是探讨一种意识的发展阶段，即在主奴关系中，主人凭自己掌管了多少奴隶和物质来证明自己的真理性（因此想当别人主人的人其实比奴隶更奴隶），而奴隶则把主人的意志当做自己的本质，被迫劳动，但在这一过程中，</span><strong><span>奴隶通过劳动将自己的本质外化、客观化为对象的独立形态，并从对象身上看到自身，达到了自由意识</span></strong><span>。就此来说，每一个人的思想里都有主人意识（独立性）和奴隶意识（依赖性），因此主奴关系乃是包括现代人在内的一切人的意识都需要经历的阶段。</span></p><p><span> </span></p><p><span>　　黑格尔从奴隶的劳动中，引出了劳动对于走向自由的必要意义：奴隶通过劳动发现了自我的本质力量，由此在精神上否定了主奴关系的真理性，意识到“</span><strong><span>不论是主人还是奴隶，一切人在思想上都是自由和平等的</span></strong><span>”（斯多葛主义），此时不论主人还是奴隶，都能够得到了思想上的解放，尽管现实中的主奴关系可能还存在着（比如斯多葛主义盛行的罗马时代仍然有奴隶制），但</span><strong><span>西方历史往往就是思想解放走在社会解放前面。</span></strong><span>我们知道，黑格尔这一思想被后来某些意识形态引申为奴隶靠斗争实现翻身当家做主，这种解释不仅降低了这一思想的层次，更是从根本上没有超出主奴关系的意识形态，因为对主奴关系的超越不等于“轮流做主人”，而是“一切人的解放”。</span></p><p><span> </span></p><p><span>　　那么，奴隶意识是怎样从依赖性的状态中解放出来的呢？</span></p><p>&nbsp;</p><p><span>　　黑格尔认为靠的是</span><strong><span>恐惧和劳动</span></strong><span>。首先是对死亡的恐惧，主人保护奴隶的生命，给奴隶饭吃；相应地，奴隶要听从主人的命令，因为奴隶认为听从主人的命令是必然的，不可抗拒的，然而，真正的不可抗拒的主人是谁呢？其实是自己对死亡的恐惧，死亡恐惧才是绝对的主人，因为现实里的主人是可能更换的，比如主人把奴隶卖给另一个奴隶主，但维系主奴关系的始终是</span><strong><span>死亡恐惧</span></strong><span>，即自己真正恐惧的是自己的死亡。意识到这一点，人的恐惧就被提升到了一个很高的层次，就不会被那些偶然的、具体的恐惧所遮蔽，而是从全盘的角度去规划自己的生命。</span><strong><span>我们当然可以把死亡恐惧引申为精神层面的死亡。</span></strong><span>比如说，一个人总是被各种各样的人际关系所束缚，他疲于奔命，今天满足这个朋友的要求，明天满足那个亲戚的要求，没有办法拒绝别人，这种恐惧是无穷尽的，也是不可能得到解决的，但是如果他意识到，这些复杂的、不可预测的恐惧背后其实都有一个根本恐惧（即害怕孤独）时，他就可能去探索能够超越孤独的办法，并拥有拒绝别人的勇气。前者（通过被迫的满足他人来缓解孤独的方案）是否可行，主要是掌握在他人手中的；而后者（通过自己的实践活动来超越孤独）是掌握在自己手中的，从前者提升到后者，靠的就是对恐惧进行思辨。</span></p><p><span> </span></p><p><span>　　当然，仅仅是有死亡恐惧还不足以超越主奴意识达到自由，更为重要的是劳动（教养和赋形），奴隶通过劳动（即对事物赋予形式）实现了一种教养，即意识到自己的主体性。在中国，劳动这个词总是被狭隘地理解为体力劳动，我们一提到劳动，想到的就是举起锄头和锤子挥汗如雨的画面，中国的劳动教养制度在理论上的依据也可以一直追溯到黑格尔这里（虽然这些东西跟黑格尔的原意几乎是完全相反的）。在《精神现象学》中，奴隶是通过“教养”（bilden）和“赋形”（Formieren）意识到自己的自为存在的，德文bilden和英文build属于同源词，意为“形成”，“成形”，Formieren的词根是“form”，即形式，因此赋形可以被理解为“为对象赋予形式”，</span><strong><span>通过这种方式实现内在的教养，让自己成长、成形。</span></strong></p><p><span> </span></p><p><span>　　那么，“赋形”能够形成对人的教养，这句话该怎样去理解？</span></p><p>&nbsp;</p><p><span>　　刚开始，主人是什么都不用做的，他只管享受产品、满足欲望就好了，而奴隶则是被迫劳动的，奴隶要去和最实际的物打交道，要克服自己的欲望（比如奴隶做的菜奴隶不能自己偷吃了），去战胜物的独立性，为物赋予人的形式，比如说要把一块石头做成雕塑，这就是为石头赋予形式，把一块生肉煮熟，也是为肉赋予形式，原来的石头和肉相对于人来说是独立的，是不可享用的，但奴隶通过自己的理性按照一定的规则对物进行改造，就能够使他们有了新的形式。因此，奴隶在不断地和物打交道的过程中，从自己所打造的对象上看到了自己的力量：</span><strong><span>我是什么？我其实就是我的作品</span></strong><span>，在我所创作的这些作品里，包含了我的智慧、技能、天份和性格，包含了我的本质，虽然我生产出来的东西名义上仍然是主人的财产，不是属于我的，虽然我是出于死亡恐惧才去做这些事的，但这毕竟还是体现了我的本质，我当我反思到这一层时，再去面对这些事物，已经不感到异己和高不可攀的感觉了，</span><strong><span>因为我能够从它们身上看到我自己的精神力量的体现</span></strong><span>。奴隶刚开始是不独立的，他认为自己是没有自我的，所以要依附于主人的意志，但在劳动的过程中，他意识到自己是拥有一种对对象进行否定的力量的，这种力量是内在于自我意识当中的，先前主人靠鞭子、刀剑和铁链来使奴隶屈服，而现在奴隶意识到，这些鞭子、刀剑和铁链说到底不还是我的劳动产品吗？不还是我，以及千千万万个奴隶按照自己的意志所打造出来的吗？</span><strong><span>它们不是主人意志的代表，反而是我的本质力量的代表，因此我就可以夺过刀剑进行反抗。</span></strong><span>我以为，黑格尔的这一思想是说，</span><strong><span>反抗本来就应当首先是精神上的反抗，枪炮刀剑最大的威力并不在于实际的杀伤力，而在于异己感所带来的精神上的震慑作用。</span></strong><span>因此当一个人在精神上克服了对对象的异己感，意识到这些对象的本质不过是我的意识时，他即使身体十分柔弱，精神上也是可以充满勇气的。</span></p><p><span> </span></p><p><span>　　这个思想对日常生活来说有什么价值吗？</span></p><p>&nbsp;</p><p><span>　　我还是想举一个自己的例子。我这个人有一个优点就是，每逢大考都会超常发挥，我的中考成绩是班级第一名，高考是班级第二，尽管这两场考试被我看作是我初中阶段、高中阶段具有总结性质的事件，但对我自己来说，这两个成绩有着完全不同的内涵。</span></p><p><span> </span></p><p>&nbsp;</p><p><span>　　中考所带给我的信心完全体现在它的名次，即我认为自己初中三年的成就完全体现在这个成绩超越了99%的同学这一个简单的事实上，但这样一个逻辑其实又是会让我感到自卑的，因为我总要面对比我成绩更好的那少部分人。另外，我打小就认识一些亲戚和同学，他们是拥有比我更多的教育资源的，比如请昂贵的私教，中学阶段就出国参加比赛，可以听很多名师讲课，我感到自己不能每件事上都比过他们，因此当我面对这样一些人时，我先前的那种超越99%的人所带来的信心又会瞬间垮下去，我会不由自主地羡慕嫉妒对方，像多数人那样感叹一番社会的不平等，</span><strong><span>这其实属于黑格尔所说的“恶无限”</span></strong><span>，就是“山外有山，人外有人”式的无限，你很厉害，我要奋发图强，比你更厉害，你的规模很大，我要比你更大，这样我才能不痛苦，但这种超越其实又是没有超越的，它完全是一种千篇一律，无止境的简单重复和交替，没有发生任何变化。</span></p><p><span> </span></p><p><span>　　但到了我的高中，我对这个成绩的看法就完全不同了，我意识到这个靠做题换来的成绩里是有着一种绝对的，不以任何外物为转移的永恒意义的，因此，我不再羡慕任何比我成绩更好的人。我曾经在多篇文章中写过这种转变是如何发生的（见知乎回答“小镇做题家的出路在哪？”“假如没有考上211和985，你会错过什么？”），也就是在我高中时长期对错题的沉思默想中，我越来越多地感受到，解（数学）题的本质其实就是意识活动，它不等于名次，不等于得奖，不等于老师、同学和家长的夸奖以及由此带来的喜悦情绪，更不等于他们的贬低和由此产生的羞愧情绪，换句话说，这些表象在思考一道题目时都是不必要出现，应该被排除在外的，学习本质是“我”与“我”之间发生的关系，是我通过自己的意识为一道数学题赋予理性的形式，我从我的成绩上见证了我自己的力量与存在，</span><strong><span>在这个活动里，我应当是不感到害怕、恐惧和羞愧感的。因此，我的做题活动，本质上是可以和进行一场演讲、管理一个公司，谈一场恋爱是一样的，它们都是我的本质力量的展现，不论我坐在矮小破旧的桌子前学习，还是在金碧辉煌的大图书馆里学习，不论我坐在中国学习，还是坐在美国学习，本质上都是一样的</span></strong><span>；一个在教育上花了100万的学生，其学习效果是完全可能不如只花了1万块的学生的，因为那100万常常被用来打造厚重的枷锁。我依然承认这个社会存在着诸多不平等，承认我自己在现实中依然要受各种束缚，承认不同的学习环境对人有着各种影响，但这些不平等和束缚对个体的精神来说不再有决定性的意义了，真正有决定性意义的，就是一个人是否自觉到思想的自由，而这件事其实只能凭借自己灵魂上的勤奋，那些外在的培训机构也好，教师也好，学区房也好，都是帮不上太多忙的，因此，</span><strong><span>家长们或许可以放下对学区房和天价培训班的焦虑，致力于给孩子创造一个能够自由表达的环境，这样孩子才可能从外界对自己的干扰以及自己对外界的讨好中抽离出来，去发现自己的力量。</span></strong></p><p><span> </span></p><p><span>　　当我在高考前一天晚上反复默想上面这些内容时，我感到，第二天的考试似乎有一场非常神圣的意义，它的意义不应该体现在我超过了百分之几的同龄人，而是我要通过第二天的考试证明这样一个理念是正确的，即人的自由自觉才是学习活动的本质，或者用马丁路德的话说，人可以直接地与上帝沟通，一切外在的中介都应当消失。《精神现象学》中有一段非常精彩的论述：</span></p><blockquote><p><span>　　这个意识（注：即斯多葛主义）对主人性与奴隶性的等级关系是否定的；它的行为是，在主人性中它不靠奴隶而获得真理性，而作为奴隶它又不靠主人的意志及它的服务而获得真理性；相反不论在宝座上或在枷锁中，在它的个别定在的一切依附关系中，它都是自由的。</span></p></blockquote><p><strong><span>相关文章：</span>
+</strong></p><p><a href='http://mp.weixin.qq.com/s?__biz=MzA5OTQ1NDY2Mg==&amp;mid=2653761231&amp;idx=1&amp;sn=329c1ff804999be208809db002e382c7&amp;chksm=8b5b9566bc2c1c70923bf6bded5f1e6442df36abe7eb2cbfde6d074c25799ac2cdbae314a0d5&amp;scene=21#wechat_redirect'><strong><span>放弃高考准备去图书馆自学可行吗？</span></strong></a></p><p><a href='http://mp.weixin.qq.com/s?__biz=MzA5OTQ1NDY2Mg==&amp;mid=2653760757&amp;idx=1&amp;sn=d6abaa5cbe1a0fac553b06973d9123e8&amp;chksm=8b5b975cbc2c1e4a6e398c3217c34afcc028f2defc93365ff94eec3ed59415a21c6f2ff92cdb&amp;scene=21#wechat_redirect'><strong><span>有哪些典型的「学生思维」？</span></strong></a></p><p>&nbsp;</p><p>&nbsp;</p><hr /><p><strong><span>作者微信</span></strong></p><p><img src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" referrerpolicy="no-referrer" alt="img"></p><p><span>欢迎关注公众号：死理性派。</span></p><p><span>“死理性派”是一种信仰，致力于从荒诞中寻找理性，从虚无中看到实在，从枷锁中发现自由。</span></p><p><span> </span></p><p>&nbsp;</p><p><img src="https://mmbiz.qlogo.cn/mmbiz_jpg/t4JXCGKsCwiaYXVRoURFA58M3ibouicvanullQZ1ibOfZTZVQKWsUVB82BN98acFzJypSfAtfDlds0ZLNibkzxA64Fg/0?wx_fmt=jpeg" referrerpolicy="no-referrer" alt="img"></p><p><span>千叶映</span></p><p><span>赞赏金额是一个著名的数列~</span></p></div>
+</body>
+</html>
