@@ -28,6 +28,12 @@
 
 [（八）怀疑与伤感——生命如何从虚无中确立自己？](https://yuliuu.com/Articles/wechat/8th)
 
+[（九）个性与人格：什么才是为自己负责？](https://yuliuu.com/Articles/wechat/9th)
+
+[（十）融合与孤独：从《三国演义》到《蝙蝠侠：黑暗骑士》](https://yuliuu.com/Articles/wechat/10th) 
+
+[（十一）原罪与自由：从俄狄浦斯看西方道德观念](https://yuliuu.com/Articles/wechat/11th) 
+
 [（十二）从僧侣到艺术家：不幸的意识如何与现实和解？](https://yuliuu.com/Articles/wechat/12th)
 
 
