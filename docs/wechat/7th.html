@@ -1,0 +1,550 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>7th</title><link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857143; overflow-x: hidden; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; tab-size: 4; background-position: inherit inherit; background-repeat: inherit inherit; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; word-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 40px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) { 
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font-family: inherit; font-size: inherit; font-style: inherit; font-variant-caps: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right-width: 0px; background-color: inherit; }
+.CodeMirror-linenumber { }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; position: relative !important; background-position: inherit inherit; background-repeat: inherit inherit; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; background-position: 0px 0px; background-repeat: initial initial; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print { 
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  html.blink-to-pdf { font-size: 13px; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background-color: rgb(204, 204, 204); display: block; overflow-x: hidden; background-position: initial initial; background-repeat: initial initial; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) { 
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background-color: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; background-position: initial initial; background-repeat: initial initial; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; }
+a.md-print-anchor { white-space: pre !important; border: none !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; text-shadow: initial !important; background-position: 0px 0px !important; background-repeat: initial initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
+.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom-width: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+svg[id^="mermaidChart"] { line-height: 1em; }
+mark { background-color: rgb(255, 255, 0); color: rgb(0, 0, 0); background-position: initial initial; background-repeat: initial initial; }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
+@media print { 
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+/* open-sans-regular - latin-ext_latin */
+  /* open-sans-italic - latin-ext_latin */
+    /* open-sans-700 - latin-ext_latin */
+    /* open-sans-700italic - latin-ext_latin */
+  html {
+    font-size: 16px;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+
+/*@media print {
+    .typora-export h1,
+    .typora-export h2 {
+        border-bottom: none;
+        padding-bottom: initial;
+    }
+
+    .typora-export h1::after,
+    .typora-export h2::after {
+        content: "";
+        display: block;
+        height: 100px;
+        margin-top: -96px;
+        border-top: 1px solid #eee;
+    }
+}*/
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #dfe2e5;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border-top: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table tr th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table tr td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table tr th:first-child,
+table tr td:first-child {
+    margin-top: 0;
+}
+table tr th:last-child,
+table tr td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+    background-color: #f3f4f4;
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+    pre {
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+.html-for-mac .context-menu {
+    --item-hover-bg-color: #E6F0FE;
+}
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+ .typora-export li, .typora-export p, .typora-export,  .footnote-line {white-space: normal;} 
+</style>
+</head>
+<body class='typora-export'>
+<div id='write'  class=''><h2><a name="精神现象学笔记七）------怎样学会批判性思考" class="md-header-anchor"></a><span>《精神现象学》笔记（七）——怎样学会批判性思考？</span></h2><p><span>Original 千叶映 死理性派 </span><em><span>8/7</span></em></p><br><p><span>　　本篇涉及的主要内容是斯多葛主义（245-292页）。</span></p><p>&nbsp;</p><p><a href='http://mp.weixin.qq.com/s?__biz=MzA5OTQ1NDY2Mg==&amp;mid=2653761436&amp;idx=1&amp;sn=345485fb9f733ec6f8cb8de2ed8cf2b7&amp;chksm=8b5b9435bc2c1d232f81045d17d82f2be28117c08b2f789be75b241c06c0c1b1f9f2dec1d65b&amp;scene=21#wechat_redirect'><span>　　</span><strong><span>《精神现象学》读书笔记（四）——怎样理解自己内心的欲望？</span></strong></a></p><p><span>　　</span><a href='http://mp.weixin.qq.com/s?__biz=MzA5OTQ1NDY2Mg==&amp;mid=2653761444&amp;idx=1&amp;sn=d6f43b581a25ff188c726ab944bd417c&amp;chksm=8b5b940dbc2c1d1bd81effe243c03cc64404a8dade3990a57b4b392bebe973595ffe54ebe6ad&amp;scene=21#wechat_redirect'><strong><span>《精神现象学》读书笔记（五）——过于在意他人的评价怎么办？</span></strong></a></p><p><span>　　</span><a href='http://mp.weixin.qq.com/s?__biz=MzA5OTQ1NDY2Mg==&amp;mid=2653761454&amp;idx=1&amp;sn=c441debc9181b148886be42ff5ddc827&amp;chksm=8b5b9407bc2c1d11fecdadbe2b530822d26897c1fda714fb7d9a6afba65a8b3badc736989249&amp;scene=21#wechat_redirect'><strong><span>《精神现象学》读书笔记（六）——超越内卷的出路在哪？</span></strong></a></p><p>&nbsp;</p><p><span>　　斯多葛主义是一种系统的个人主义思想，它在西方人的精神发展史上有着极为重要的意义，我们今天习以为常的许多观念例如</span><strong><span>法治精神</span></strong><span>、</span><strong><span>人人平等</span></strong><span>、</span><strong><span>世界主义</span></strong><span>的思想都可以追溯到斯多葛主义这里，而上述思想在其他社会中是找不见的。</span></p><p>&nbsp;</p><p><span>　　比如斯多葛主义认为在人定法之上还有一个自然法，世俗的国王可以制定、修改人定法，但真正的那个按照理性原则运行的</span><strong><span>自然法</span></strong><span>是连国王也要遵守的；</span></p><p>&nbsp;</p><p><span>　　再比如，斯多葛主义发现了普遍的“人”的概念和真正的平等，即认为所有的人不论其出身、财富、地位、民族的不同，在都具有理性这一点上是相同的，因此在精神上，</span><strong><span>奴隶和主人是平等的</span></strong><span>。在这里需要强调一下，很多社会都有着某种平等观，但这些平等都是建立在人的外在属性或者动物性上，而非建立在“理性”上的。</span></p><p>&nbsp;</p><p><span>　　斯多葛派的思想很丰富，这篇笔记不可能面面俱到，而今天我想要从斯多葛派的平等观引出的现实问题是：</span><strong><span>“怎样学会批判性思考”</span></strong><span>。</span></p><p>&nbsp;</p><p><span>　　</span><strong><span>斯多葛主义之所以能够否定现实中等级关系的真理性，与它的自由观有着根本关系</span></strong><span>。斯多葛主义认为，人的自由首先是思维的自由，运用理性的自由，万事万物都不过是我的思维，或者说，只有我把万事万物看做是思维，并</span><strong><span>退回到我的内心世界时</span></strong><span>，我才达到了它们的本质，那么这也意味着，现实里人与人的外在差异就都被看作是次要的，非本质性的了，主人和奴隶已经不再有本质上的区别了，因为他们都有思维能力，在这一点上是平等的，斯多葛派的思想家里既有奴隶，也有皇帝，比如罗马皇帝</span><strong><span>安东尼·奥古斯都</span></strong><span>就非常敬佩奴隶出身的斯多葛派思想家</span><strong><span>爱彼克泰德</span></strong><span>，并在自己的著作《沉思录》中大量引用后者的思想（非常推荐大家去翻一翻这本书），可见此时主奴关系在精神层面上已经不再被看做是根深蒂固的了。这里不妨举个例子，《沉思录》中就有这样一段话：</span></p><blockquote><p><span>　　你憎恶有口臭的人吗？你憎恶有狐臭的人吗？你如何妥善地对待这一困扰呢？他有这样一张嘴，他有这样一个胳肢窝。这些东西产生这种气味是很正常的事情。据说他具备理性——假如他仔细地考虑一番，便能明白自己为何给别人造成了困扰。我期望你的这种觉悟能够让你感到满意。</span><strong><span>你既然也具备理性，就用你的领悟力去引导他的领悟力，向他指出他的过错，并规劝他吧。假如你能够说服他的话，你就治愈了他。你无须恼怒。</span></strong></p></blockquote><p>&nbsp;</p><p><span>　　这样一个观念（意识到一切人都有理性，有一个“自我”）在奴隶社会里是相当超前的，虽然说罗马时代依然有着奴隶制，斯多葛派的自由由于仅仅停留在思想层面的超越，因而显得十分窝囊，类似于阿Q的“精神胜利法”。但我们想一下，</span><strong><span>思想解放和社会解放哪一个走在前面更合理呢？</span></strong></p><p>&nbsp;</p><p><span>　　在中国，人们一般把夺权看作是比思想解放重要得多的事情，一个圣人应当先追求社会革命，所谓“救苍生于水火”；再利用手中的权力推动思想革命和精神文明建设，即“教化百姓”，而没有思想解放作为前提的社会革命如何能够成功呢？这就不得不靠大量的阴谋、暴力、谎言才能完成了，然而，这些权术计谋尽管能够让一个人战胜现实的敌人，但在精神层面上，不如说他早就被敌人战胜了，因为这个革命者本身也是没有独立的自我的，他认为自己最崇高的使命就在于拯救别人，也就是说，他已经预先在精神上设立了一个等级制了，即认为他人首先是没有理性的，故只能靠欺骗、恐吓、糊弄才能推动他们朝前走，然而不论他如何憎恶现实中的等级制，都不可能真正改变不平等，因为现实的不平等之所以能够存在，无不是基于一种精神上的不平等。</span></p><p><span> </span></p><p><span>　　因此，斯多葛主义对我最大的启发就在于，</span><strong><span>它在世俗等级之外，为每个人的内心世界确立了绝对的意义，不存在某个不可知的权威能够干涉、控制我的精神。</span></strong><span>如果我要敬重一个人，那也一定是因为TA能够用理性说服我，而不是他拥有某些外在的身份和头衔，更不是因为TA能够让我恐惧。</span></p><p><span> </span></p><p><span>　　经常有一些网友问我，你是不是学哲学/心理学/历史/人文社科专业的？</span></p><p><span>　　我会说：为什么要这么问呢？</span></p><p><span>　　对方会说：因为我觉得你的文章很能打动我，就猜测你肯定是学这个专业的。</span></p><p><span>　　我就会感到奇怪，为什么我们下意识地把一个人的能力归因为他的大学和专业教育，而不是归因为他的个人特质呢？换句话说，</span><strong><span>那些外在的学习环境、好的老师、好的氛围真的能够决定一个人的思想吗？</span></strong></p><p><span> </span></p><p><span>　　我上大一的时候，也是喜欢把自己的大学和专业看作是最大的标签，并按照别人的头衔来判断对方的思维能力，比如说院士肯定比教授更聪明，教授肯定比副教授更聪明，老师肯定比学生更聪明，专业的肯定比非专业的更明智，第一名肯定比倒数第一更优越等等。按照这个推理，我在某理工科985大学念理工科专业，那么我肯定比绝大多数985以下的大学生更擅长理工科，但我肯定没有同等985大学文科专业的同学更擅长学文科.......这个复杂的“比较系统”成为了我的自我概念的一部分，当然它也会受到一些挑战和质疑，但我可以用“统计数据就是如此啊”、“学历反映了家境”等各种论据来圆这个逻辑，目的是为了证明：</span><strong><span>人从根本上是受外界因素决定的</span></strong><span>。因此一个人如何生存和生活，如何决策，原则上是可以被某些权威或者某些测评工具根据一些外在的属性去规划出来的，比如说，你有多少财产，是什么学历，身高多少，那么你要结婚的对象大致范围也就可以确定了；你现在是什么年龄，升到了处级还是科级，那么你未来的人生轨迹也能预测的八九不离十了。</span></p><p><span> </span></p><p><span>　　那么这样一种等级观念是怎样破裂的呢？</span></p><p>&nbsp;</p><p>&nbsp;</p><p><span>　　大一某一天，我向一个头衔很多的大学老师请教一个物理问题，他支支吾吾给我讲了20分钟，时而结巴，时而反复地说一些话，时而否定自己刚才说的话，但始终也没讲明白那个问题（但我看出来他很想跟我讲明白），那时候我突然就开始质疑：</span><strong><span>我为什么要相信他的能力呢</span></strong><span>？也许有人会说：这个老师只是不擅长讲，但肯定有别的地方很突出，年轻人还是要虚心。可是我不这么认为，</span><strong><span>表达能力本来就是思维的体现</span></strong><span>，一个人说话都含糊不清，那么他的思维也不太可能很清晰，更重要的是，此时的他是一个教师，是要以学生为中心的，他别的地方是否突出和我毫无关系。我坐下来后自己又安静地想那个问题大概几十分钟，终于想通了，并且我尝试给别人也讲明白了，我发现自己在这一点上只需要稍稍努力就能够超过他。</span></p><p><span> </span></p><p><span>　　这个事情启发了我：</span><strong><span>如果我不去怀疑他的能力，或者说把他看作是本质上比我明智的人，那么我永远都不会尝试超过他。</span></strong><span>那么，其他的等级观念是否也可能是错误的，不真实的呢？我开始逐一进行验证。</span></p><p><span> </span></p><p><span>　　我首先接触的是其他专业成绩靠前的人，以向他们求教学业问题的名义，实际上是做一个调查活动，结果令我感到很意外，我发现许多人虽然考试分数很高，但常常解释不清楚一个定理、一个题目，更做不到广泛联系，他们在表达时常常出现了很多感觉水平的不严谨词汇，他们的做题能力仅仅是一种熟练的技巧，并未达到概念的自觉。更不必说，许多考试从出题到改卷从头到尾都是不严谨的，</span><strong><span>以这样漏洞百出的一套流程规范，如何能够拥有评判人精神优劣的权威性呢？</span></strong></p><p><span> </span></p><p><span>　　接下来，我去听其他专业的课，包括心理学、哲学、法律、历史等等。我意外地发现，大部分学生其实都不爱自己的专业，老师在课堂上提一些问题，如果不用加分或者其他方法去激励，学生们通常是没有什么兴趣去思考的。我习惯提前看他们的专业书，读相关的论文（虽然我一点基础也没有），然后主动回答老师的问题，虽然有很多说错的，但也有不少答对的，我发现通过简单的自学，我并不比他们专业的学生更差，而许多专业的学生连自己专业的基本问题都不清楚，因为大家的心智被考试焦虑和人际压力占得满满当当的，没有办法抽离出来去自由地思考。我感到，</span><strong><span>其实所谓专业之间的知识壁垒并没有那么坚固，理论上，一个人积极去思考，运用常识的逻辑，是能够掌握大部分知识的</span></strong><span>，</span><strong><span>但为什么现实里我们都觉得学习那么困难、痛苦呢？</span></strong><span>其实干扰我们思考的最大障碍，就是那种精神上的等级观念，即预先认为自己不可能学会那个知识，或者说必须要考一个什么证，在一个什么样的集体中，掌握什么样的先进学习工具，达到一个什么标准才能够学会。在这种等级观念，我总是感觉自己不够好，感到自己是可能犯错的，所以我不敢去主动学习任何超出自己身份之外的知识，或者稍微遇到难处就认为“我不是这块料”。</span></p><p><span> </span></p><p><img src="https://mmbiz.qpic.cn/mmbiz_png/o0l82FZys07KShCyROBIYf4qAicZkJVoYFuwDgrVnmD7lJHASgeh3icjFVgtI6TzdHMK3Bj3PjwKwWE0LKw6JAEQ/640?wx_fmt=png&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" referrerpolicy="no-referrer" alt="img"></p><p>&nbsp;</p><p><span>　　从这个角度来看，中国的中学教育对人的自学能力的剥夺是很彻底的，它让一个人经常处于自卑、羞愧、焦虑的状态，并把</span><strong><span>这种精神上的无力、担惊受怕的状态和在权威面前的自觉屈从与崇拜说成是一种品德</span></strong><span>（即谦虚），把自己思想上的懒惰说成是尊重别人的专业水平，但这种谦虚又是一种伪善，它既贬低了自己，也助长了精神上的腐败，让才不配位的人能够心安理得地浪费公共资源。黑格尔在分析中世纪天主教会的腐败时就曾说：</span></p><blockquote><p><span>　　这种腐败决不是偶然的、如一些人所说是单纯滥用权力的结果，因此只要遏制了某些人的私欲即可将其消除；相反，这不仅是一种源于制度原因而必然的、根深蒂固的腐败，而且是一种不断地向一切空间弥漫的死症，它注定到处孳生出“权力欲、放纵淫佚、种种野蛮和卑鄙的腐败情形、伪善和欺骗。”</span></p></blockquote><p>&nbsp;</p><p><span>　　黑格尔之所以认为中世纪教会的腐败并非偶然，乃是因为</span><strong><span>天主教会和教皇在人与人之间制造了一种精神上的不平等</span></strong><span>，即教会认为自己对《圣经》的解读是绝对权威的，个人必须以教会为中介才能够称义，而马丁路德的宗教改革所要否定的，正是这种精神上的不平等，主张教徒通过个人阅读《圣经》，凭自己的信仰就能够直接与上帝相通。</span></p><p><span> </span></p><p><span>　　有人会问，无视专家和权威的声音难道不是在鼓吹反智，鼓励民科吗？这两者的界限在哪里呢？</span></p><p>&nbsp;</p><p><span>　　我以为，真正的学问只能也必然是“民间化”，即独立于政治权力的，但中国的民科并不能简单地看做是“民间性”太强导致的。中国的民科民哲有这样几个特点：一是体系无比宏大但缺乏逻辑，尤其喜欢提一些不着边际的“大一统理论”；二是认为自己是受到了“官科”的打压才不能扬名，或者说期待有一个更高层的大领导发现自己；三是有明显的泛道德化的倾向，即他们的“理论”往往是为了教化百姓，解决某些社会问题，或者说用来治国安邦，为统治者提供某种意见，很少是在单纯地描述问题和现象。</span></p><p><span> </span></p><p><span>　　我们不能被民哲民科的那种“反权威”的表象所迷惑，应当看到，他们身上恰好有着鲜明的儒家正统观念（“学得文武艺，货与帝王家”、“中层是坏的，高层是好的”）以及上世纪大跃进时期“大轰大嗡”的狂想色彩。在“大跃进”时期，任何敢于以科学理论反驳大生产的声音，都会被扣上“盲目崇拜西方科学权威”、“科学技术神秘论”的帽子，“算政治账”压倒了一切学科的规范性，中国的不少民哲民科思想上至今还停留在那个年代，但这些人的“反学术权威”归根到底是以自己对政治权威的忠诚（或自己想象出来的圣君明主）为前提的，他们并没有意识到自己作为一个有理性的人本身就具有一种否定的力量。</span></p><p>&nbsp;</p><p><strong><span>相关文章：</span></strong></p><p><strong><a href='http://mp.weixin.qq.com/s?__biz=MzA5OTQ1NDY2Mg==&amp;mid=2653760757&amp;idx=1&amp;sn=d6abaa5cbe1a0fac553b06973d9123e8&amp;chksm=8b5b975cbc2c1e4a6e398c3217c34afcc028f2defc93365ff94eec3ed59415a21c6f2ff92cdb&amp;scene=21#wechat_redirect'><span>有哪些典型的「学生思维」？</span></a></strong></p><p><strong><a href='http://mp.weixin.qq.com/s?__biz=MzA5OTQ1NDY2Mg==&amp;mid=2653761231&amp;idx=1&amp;sn=329c1ff804999be208809db002e382c7&amp;chksm=8b5b9566bc2c1c70923bf6bded5f1e6442df36abe7eb2cbfde6d074c25799ac2cdbae314a0d5&amp;scene=21#wechat_redirect'><span>放弃高考准备去图书馆自学可行吗？</span></a>
+</strong></p><p><strong><a href='http://mp.weixin.qq.com/s?__biz=MzA5OTQ1NDY2Mg==&amp;mid=2653760795&amp;idx=1&amp;sn=b9c471cb87654af7bf328df4e9d13742&amp;chksm=8b5b96b2bc2c1fa44c92de37654b385f1432b512d7f46d9de320a0212dbd7e8a1a8d770802d4&amp;scene=21#wechat_redirect'><span>如何提高自学能力？</span></a>
+</strong></p><p>&nbsp;</p><hr /><p>&nbsp;</p><p><strong><span>作者微信：</span></strong></p><p><img src="https://mmbiz.qpic.cn/mmbiz_jpg/o0l82FZys07F1EWKRhQlZMtnTGAk3crnyz1T1rDM0CGib4WppLoUWhb81EPlGqk2qWj0R7Ob2zzCvEL8LAlzoWw/640?wx_fmt=jpeg&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" referrerpolicy="no-referrer" alt="img"></p><p><span>欢迎关注公众号：死理性派。</span></p><p><span>“死理性派”是一种信仰，致力于从荒诞中寻找理性，从虚无中看到实在，从枷锁中发现自由。</span></p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p><img src="https://mmbiz.qlogo.cn/mmbiz_jpg/t4JXCGKsCwiaYXVRoURFA58M3ibouicvanullQZ1ibOfZTZVQKWsUVB82BN98acFzJypSfAtfDlds0ZLNibkzxA64Fg/0?wx_fmt=jpeg" referrerpolicy="no-referrer" alt="img"></p><p><span>千叶映</span></p><p><span>赞赏金额是一个著名的数列~</span></p></div>
+</body>
+</html>
