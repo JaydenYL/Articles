@@ -40,7 +40,15 @@
 
 
 
-该作者的其他篇目也有探讨内卷，焦虑，奋斗逼之类的话题：
+<br>《西方哲学史》阅读笔记：
+
+[（一）《西方哲学史》阅读笔记 —— 从希腊哲学说起](https://yuliuu.com/Articles/wechat/HistOfWestPhil-1st)
+
+
+
+
+
+<br>该作者的其他篇目也有探讨内卷，焦虑，奋斗逼之类的话题：
 
 [“打工是不可能打工的”](https://yuliuu.com/Articles/wechat/4-24)
 
