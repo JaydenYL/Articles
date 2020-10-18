@@ -44,7 +44,9 @@
 
 [（一）《西方哲学史》阅读笔记 —— 从希腊哲学说起](https://yuliuu.com/Articles/wechat/HistOfWestPhil-1st)
 
+[（二）《西方哲学史》阅读笔记 —— 泰勒斯的“水”](https://yuliuu.com/Articles/wechat/HistOfWestPhil-2nd) 
 
+[（三）《西方哲学史》阅读笔记 —— 什么是数学 ](https://yuliuu.com/Articles/wechat/HistOfWestPhil-3rd)
 
 
 
