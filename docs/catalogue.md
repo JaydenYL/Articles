@@ -46,6 +46,8 @@
 
 [（三）《西方哲学史》阅读笔记 —— 什么是数学 ](https://yuliuu.com/Articles/wechat/HistOfWestPhil-3rd)
 
+[（四）《西方哲学史》阅读笔记 —— 火的哲学](https://yuliuu.com/Articles/wechat/HistOfWestPhil-4th) 
+
 
 
 <br>该作者的其他篇目也有探讨内卷，焦虑，奋斗逼之类的话题：
