@@ -1,0 +1,548 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>西方哲学史阅读笔记（六）芝诺</title><link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857143; overflow-x: hidden; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; tab-size: 4; background-position: inherit inherit; background-repeat: inherit inherit; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; word-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 40px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) { 
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font-family: inherit; font-size: inherit; font-style: inherit; font-variant-caps: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right-width: 0px; background-color: inherit; }
+.CodeMirror-linenumber { }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; position: relative !important; background-position: inherit inherit; background-repeat: inherit inherit; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; background-position: 0px 0px; background-repeat: initial initial; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print { 
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  html.blink-to-pdf { font-size: 13px; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background-color: rgb(204, 204, 204); display: block; overflow-x: hidden; background-position: initial initial; background-repeat: initial initial; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) { 
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background-color: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; background-position: initial initial; background-repeat: initial initial; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; }
+a.md-print-anchor { white-space: pre !important; border: none !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; text-shadow: initial !important; background-position: 0px 0px !important; background-repeat: initial initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
+.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom-width: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+svg[id^="mermaidChart"] { line-height: 1em; }
+mark { background-color: rgb(255, 255, 0); color: rgb(0, 0, 0); background-position: initial initial; background-repeat: initial initial; }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
+@media print { 
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+/* open-sans-regular - latin-ext_latin */
+  /* open-sans-italic - latin-ext_latin */
+    /* open-sans-700 - latin-ext_latin */
+    /* open-sans-700italic - latin-ext_latin */
+  html {
+    font-size: 16px;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+
+/*@media print {
+    .typora-export h1,
+    .typora-export h2 {
+        border-bottom: none;
+        padding-bottom: initial;
+    }
+
+    .typora-export h1::after,
+    .typora-export h2::after {
+        content: "";
+        display: block;
+        height: 100px;
+        margin-top: -96px;
+        border-top: 1px solid #eee;
+    }
+}*/
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #dfe2e5;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border-top: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table tr th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table tr td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table tr th:first-child,
+table tr td:first-child {
+    margin-top: 0;
+}
+table tr th:last-child,
+table tr td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+    background-color: #f3f4f4;
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+    pre {
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+.html-for-mac .context-menu {
+    --item-hover-bg-color: #E6F0FE;
+}
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+ .typora-export li, .typora-export p, .typora-export,  .footnote-line {white-space: normal;} 
+</style>
+</head>
+<body class='typora-export'>
+<div id='write'  class=''><h2><a name="西方哲学史阅读笔记六）芝诺" class="md-header-anchor"></a><span>西方哲学史阅读笔记（六）芝诺</span></h2><p><span>Original 千叶映 死理性派 </span><em><span>10/26</span></em></p><p><span>收录于话题   哲学    文化    历史 </span></p><p><span>本篇是该系列的第六篇，主要讲的是芝诺悖论。</span></p><p>&nbsp;</p><p><a href='http://mp.weixin.qq.com/s?__biz=MzA5OTQ1NDY2Mg==&amp;mid=2653761564&amp;idx=1&amp;sn=9be138aa73e6a22acaa3ce03d7b928ee&amp;chksm=8b5b8bb5bc2c02a3e981f4f36f58ca8d267be7fce0f18110d658445c41b74a5d3524382ae92f&amp;scene=21#wechat_redirect'><strong><span>西方哲学史阅读笔记（五）巴门尼德</span></strong></a></p><p><a href='http://mp.weixin.qq.com/s?__biz=MzA5OTQ1NDY2Mg==&amp;mid=2653761559&amp;idx=1&amp;sn=54968e99da93b6adcb76e9cb8e778f0a&amp;chksm=8b5b8bbebc2c02a8e7672d093c4588b9b9159391c56b33590221e6d8c4f545a65bc36b796a6f&amp;scene=21#wechat_redirect'><strong><span>西方哲学史阅读笔记（四）火的哲学</span></strong></a></p><p><a href='http://mp.weixin.qq.com/s?__biz=MzA5OTQ1NDY2Mg==&amp;mid=2653761554&amp;idx=1&amp;sn=753bef04e5aa97f4a7e7e7ac7ad839c0&amp;chksm=8b5b8bbbbc2c02ad63675ce71d2f17636dab660064b04bcbaca343a87486a3942e3bda73ad8a&amp;scene=21#wechat_redirect'><strong><span>西方哲学史阅读笔记（三）什么是数学</span></strong></a></p><p><span> </span></p><p><span>芝诺（Zeno）是埃利亚派的哲学家，也是巴门尼德最杰出的学生。希腊哲学家之间有不少都是师承关系，据说巴门尼德很喜欢他，还收他为义子。由于巴门尼德的“存在”学说将抽象的思维当做实在的东西，而将活生生的感性生活看作虚妄，这对于朴素的常识来说难以理解。芝诺的工作就是为“存在”进行辩护和解释，也就是著名的反对运动的悖论。其实，芝诺在现实中也是一个英雄，他曾和人密谋推翻一个僭主的专制统治，不料事情败露，僭主当着民众的面用酷刑逼问他的同伙是谁，芝诺拒绝招供，并把自己的舌头咬下来吐在了僭主的脸上，最后芝诺被放在一个石臼里捣碎而死；也有一种说法是他假装对僭主有几句话要靠近耳边才能说，于是他就咬下来僭主的耳朵并紧紧抱住僭主，直到被人打死。芝诺的惨死激发了在场民众的愤怒，他们冲上来把僭主杀死并解放了自己。</span></p><p><span> </span></p><p><span>芝诺的证明方法是反证法或者说归谬法，他是西方哲学史上第一个具有逻辑证明意识的人。巴门尼德虽然提出了一些证明思路，但他对证明的自觉意识并不强，我们在第二篇里曾经谈过毕达哥拉斯也有证明意识，但毕达哥拉斯的证明意识只是数学证明意识，数学证明不能等同于逻辑证明，数学概念尽管已经对感觉有所超越，但仍然是可以诉诸于感性直观的，因此并未超越感性。而逻辑证明诉诸的是超感性的纯粹理性概念，比如我们常说的形式逻辑证明：</span></p><p>&nbsp;</p><p><span>a. 人是会死的</span></p><p><span>b. 苏格拉底是人</span></p><p><span>c. 所以苏格拉底是会死的</span></p><p>&nbsp;</p><p><span>这个证明之所以能够有效果，是不能诉诸于个体感觉的，否则别人就会说，这只是你个人的大脑结构或者心理状态导致你产生了这一系列的联想，并不能说明这个证明具有普遍的有效性（我们生活中有很多朴素唯物主义者在讲道理讲不过别人的时候喜欢拿这个反驳）。那么这个证明起作用的关键就在于对种、属等概念有所觉知，“会死的”是“种”，“人”是“属”，“苏格拉底”是“人”这个属当中的一个个体。种、属概念是纯粹理性的概念，它们之间的包含关系不依赖于经验的感觉的东西，亚里士多德就对此有深刻的自觉。我们可以说，</span><strong><span>人所能够把握的纯粹理性的概念越多，就越是能够理解和解释现实，那么当现实和理论出现差距时，就意味着到了需要发展理论的时候</span></strong><span>。芝诺悖论的意义就在于此。</span></p><p><span> </span></p><p><span>芝诺悖论的具体过程如下：</span></p><p>&nbsp;</p><p><span>第一是“二分法”。芝诺认为，任何运动的物体要跑完全程到达终点，需要先跑完全程的一半，要跑完一半，就需要跑完一半的一半，如此类推，需要无限长的时间才能达到终点，结论是物体永远不可能达到终点。</span></p><p>&nbsp;</p><p><span>第二是阿基里斯与乌龟。阿基里斯是古希腊擅长奔跑的英雄，芝诺假设他面前不远处有一只乌龟，他和乌龟同时向前运动。阿基里斯要追上乌龟，就需要先跑到乌龟的起点，而此时乌龟已经向前运动了一段距离，那么阿基里斯又要先追上这段路，但当他追上了这段距离后，乌龟已经又向前运动了一段距离，如此类推，结果是阿基里斯只能不断地接近乌龟，但不能追上乌龟。其实按照这种说法，阿基里斯何止是追不上乌龟，他其实连一步都走不出去，因为根据“二分法”，阿基里斯要走任何确定长度的距离，都需要先走这段距离的一半，要走这段距离的一半，就需要先走这段距离一半的一半，结果是他一动也不能动。</span></p><p>&nbsp;</p><p><span>第三是“飞箭不动”。其思路是：一支箭从A点射出飞到B点，在这个过程中的任何一个瞬间，箭都必然在一个确定的位置上静止，由于每个瞬间箭都是静止的，所以箭其实是一动不动的。</span></p><p>&nbsp;</p><p><span>第四是“运动场悖论”，又叫做“一半等于全体”，这个例子可以抽象成如下问题：假设坐标轴上有两条线段，线段A是从（0,0）到（2,0），线段B是从（2,0）到（4,0），现在让这两条线段以同样速度相向运动，那么两条线段将重合于（1,0）到（3,0），此时线段A只走了1个单位的距离，但相对于B却走完了对方的全长，即2个单位，所以说1个单位的距离就等于2个单位的距离，但这是不可能的，于是构成悖论。</span></p><p><span> </span></p><p><span>芝诺的四个悖论总的来说都是一个目的，即证明</span><strong><span>巴门尼德所说的“存在”是不动的</span></strong><span>，但涉及的问题很多：空间、时间的无限可分性问题、连续性与间断性问题等。</span></p><p>&nbsp;</p><p><img src="https://mmbiz.qpic.cn/mmbiz_jpg/o0l82FZys06qNUhPdtndKN9QzBVyeOOHMDfPQdOJArIOgy4FUOuZExpFCLiaAlxQEtpDOO2icR9zuictRficreuzjw/640?wx_fmt=jpeg&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" referrerpolicy="no-referrer" alt="img"></p><p>&nbsp;</p><p><span>首先芝诺悖论牵扯到的一个问题是：空间和时间是否是无限可分的？量子力学告诉我们，能量在发射和吸收的时候并非连续不断、无限可分的，而是有最小单位的，也就是有间断的。我们从常识上会认为一切运动和变化都是连续不间断的，但普朗克的理论证明了时间和空间并非无限可分，而是有最小单位的（只是这个值非常小，小到远远超出人类能够测量的精度），也就是说小于某个长度的时间在物理学中没有意义（普朗克时间=普朗克长度/光速），这自然就回答了“阿基里斯和乌龟”悖论。</span></p><p><span> </span></p><p><span>不过，物理学显然并不能完全满足人的理性的追问。假如我们将芝诺悖论抽象成数学问题而不考虑现实性，该怎么去解释呢？这就牵扯到“无穷小”和“无穷大”的问题。</span></p><p><span> </span></p><p>&nbsp;</p><p><span>芝诺悖论的关键在于：对一个线段进行无限分割，就能得到无数个线段，要走完无数个线段的长度，就需要无数段的时间，而无数段的时间相加就是一个无穷大的时间，结论是运动是不可能的。这里的问题在于，芝诺实际上将无穷小、无穷大仅仅是看做一个特别小、特别大的确定的数而已，像2，根号2，π这样的数都是有明确规定的确定的数，但无穷小、无穷大则不是确定的数，无穷小的定义就是就是比任何一个确定的数都要小的数，无穷大则是比任何一个确定的数都要大的数，这些概念在实数系R的框架下都是含混的、有问题的。虽然我们可以用微积分来计算芝诺悖论，但刚开始的微积分也是把无穷小量看作是实际的数，因而面临着诸多的指责和批评。后来的数学家（柯西、威尔斯斯特拉）在构建微积分的体系时有意避开了引入无穷小量，这就是ε-N语言：</span></p><p><span> </span></p><p><span>序列 </span><img src="https://mmbiz.qpic.cn/mmbiz_svg/Jiavz9UrH80nzsFVJtnWFkvBxxjHzblwbRBoxb54MiavvCHxzwzmYknsI4bs4UJmBibBF5ibmFzx2PLAk44VQMFfqfTffwUzycpN/640?wx_fmt=svg&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" referrerpolicy="no-referrer" alt="img"><span> 收敛于a可以表述为：如果对于任意（小的）正数ε，存在N，使得对于所有的n≥N，有 </span><img src="https://mmbiz.qpic.cn/mmbiz_svg/Jiavz9UrH80nzsFVJtnWFkvBxxjHzblwbVJiaia7JgxicvrllxnaaWOI1Oiaocb0Quic4wX2rwPSiciabvBcib7PsrpUYs9NPsSZbvZmn/640?wx_fmt=svg&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" referrerpolicy="no-referrer" alt="img"><span> ＜ </span><img src="https://mmbiz.qpic.cn/mmbiz_svg/Jiavz9UrH80nzsFVJtnWFkvBxxjHzblwbpxhswPFGlLqypwRZuGv9Kpq9J4zm5kvZRccYxa9hvkZyLcwvBpNaHVGOkbA0l0U4/640?wx_fmt=svg&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" referrerpolicy="no-referrer" alt="img"><span> ，则称当n趋于无穷大时，序列 </span><img src="https://mmbiz.qpic.cn/mmbiz_svg/Jiavz9UrH80nzsFVJtnWFkvBxxjHzblwbOhbvbdDX7BmniaiccFXbiawfcaEgiaAzp46QK3V2ytYicbk1XhCuWoem6NwHsYARZ4alz/640?wx_fmt=svg&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" referrerpolicy="no-referrer" alt="img"><span> .....有极限a。</span></p><p>&nbsp;</p><p><span>或者是ε-δ语言：</span></p><p>&nbsp;</p><p><span>如果对于任意（小的）正数ε，存在δ（依赖于ε）使得对于满足不等式 </span><img src="https://mmbiz.qpic.cn/mmbiz_svg/Jiavz9UrH80nzsFVJtnWFkvBxxjHzblwbFxFksrtiap2YLNkSAMqsv7p3TTmQTU1QhDtu1ugQneKklsaEYaVTfU60EsdeiaLjaX/640?wx_fmt=svg&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" referrerpolicy="no-referrer" alt="img"><span> ＜ </span><img src="https://mmbiz.qpic.cn/mmbiz_svg/Jiavz9UrH80nzsFVJtnWFkvBxxjHzblwbKbtobTzAUTVn2vynPFv6DsCqgfdKWN43ljib9jeqEDCsbXwXdbNznk5OXSeQ8Liag9/640?wx_fmt=svg&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" referrerpolicy="no-referrer" alt="img"><span> 的所有不等于x1的x，有 </span><img src="https://mmbiz.qpic.cn/mmbiz_svg/Jiavz9UrH80nzsFVJtnWFkvBxxjHzblwbDbric1ib5pGfqqSHCQ8DcK13PMaag7v3DRrHefDiczricB88MicOykHFibW27IrAgwPibLv/640?wx_fmt=svg&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" referrerpolicy="no-referrer" alt="img"><span> ＜ </span><img src="https://mmbiz.qpic.cn/mmbiz_svg/Jiavz9UrH80nzsFVJtnWFkvBxxjHzblwbpxhswPFGlLqypwRZuGv9Kpq9J4zm5kvZRccYxa9hvkZyLcwvBpNaHVGOkbA0l0U4/640?wx_fmt=svg&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" referrerpolicy="no-referrer" alt="img"><span> ，则称f(x)在x趋近于x1时有极限a。</span></p><p>&nbsp;</p><p><span> </span></p><p><span>不过，虽然上述定义避开了无穷小量等诸多含混不清的概念，却仍然没有从正面解释无穷小在数学上为什么不能按照芝诺那样去推理。这就需要介绍非标准分析。</span></p><p>&nbsp;</p><p><span>实数系R不包含无穷小量和无穷大量，它们被视为变量，而非标准分析则通过将公理体系减弱到第一阶构造出一个超实数系R</span><em><span>，从而将无穷小量包含进来。“无穷小量不存在”指的是在实数集R中不存在，但在R</span></em><span>中它可以存在，因为R是R</span><em><span>的子集。超实数系R</span></em><span>不具备实数系R的阿基米德性质。所谓阿基米德性质，可以简化为：给出任何数x，都存在自然数n＞x，反映在几何上就是：不论多长的线段，都能用有限条等长的线段去覆盖。超实数系R</span><em><span>由于包含了无穷小量，故不具备阿基米德性质，但其他性质与实数系R相同，即能够进行加、减、乘、除运算。因此在超实数系R</span></em><span>中可以存在公式：无穷小×无穷大=有限数、无穷大÷无穷大=有限数。</span></p><p>&nbsp;</p><p><span>由此可以从正面解释芝诺悖论，即</span><strong><span>芝诺以为任何量乘无穷大都必然等于无穷大，不知道存在一个量乘无穷大是可以等于有限数的，不知道有限数和无穷小量之间有本质的差异。</span></strong></p><p>&nbsp;</p><p><span> </span></p><p><span>芝诺悖论激发了后世大量的理论争辩，而且这种争辩和反驳仍然会持续下去，这就称得上是一个相当优秀的学说。据说有人听到“阿基里斯追乌龟”的悖论后立刻用走来走去来反驳芝诺，但这种反驳是没有意义的。芝诺不是没有基本常识的傻子，反而是非常聪明的人，</span><strong><span>他善于从现象中追溯其理论上的依据，不因为这种现象司空见惯、习以为常就认为它理所当然，也就是说，芝诺把思想和理论看做比感觉经验更本质的存在，而这正是西方哲学和科学的一项基本传统。</span></strong></p><p><span> </span></p><p><span>这里需要多说一点，中国有一种崇拜朴素经验、轻视思辨推理的传统。按照某种从上个世纪流行至今的观点，一切理论都要联系实际，一切真理都是“劳动人民千百年来长期的生产生活实践中摸索归纳出来的”。但这话是经不起推敲的。芝诺悖论对于科学史和哲学史都有着巨大的意义，但光是凭一个人在劳动中摸索，哪怕摸索一万年也摸索不出芝诺悖论这么反直觉的东西。其实任何一个理论都必然是“脱离实际”的，因为人们所谓的“实际”不过是未经反思的朴素感觉，而我们现在习以为常的诸多客观实际（比如物理学所理解的自然界图景）本身就是人的理性的产物（这意味着不存在脱离于人的理性的客观实际），是已经离朴素的感觉非常遥远的东西，只不过由于我们从小从四面八方接受了各种蕴含着理性的观点，已经能够做到下意识地用科学的思维看世界，所以不觉得它们有那么脱离实际而已。</span></p><p>&nbsp;</p><p><span>尽管理论刚开始或许都是从感觉经验中获取灵感的，但起着核心作用的是对纯粹理性的觉知。我们知道，大自然中不少动物的感官都比人要更敏锐，有些动物能够看到人所看不到、听不到的东西，但它们没有科学更没有哲学；某些原始人对于太阳、大雪的感官上的敏锐程度远超现代人，但他们对太阳和雪的认识水平不到现代人的万分之一。康德哲学已经阐明，</span><strong><span>任何经验的东西必须被置于认知主体的一系列先验范畴中才可能形成知识</span></strong><span>，这意味着如果没有对这些超感性的纯粹理性范畴有所觉知，不论有多少感觉经验都是无法形成科学的。</span></p><p><span> </span></p><p><span>在这里，还存在一种反智传统，就是把反复的思考、追问看作是无意义的一件事，而把感性的劳动看作是神圣的、聪明的、智慧的、灵活的。比如上世纪流行这样一些观点：“历史上总是学问少的人推翻学问多的人”、“烦琐哲学总是要灭亡的”。“读多了，又不能消化，也可能走向反面，成为书呆子，成为教条主义者”。认同这种观点的人通常很喜欢举出一些例子，比如某某学者读书很多，但是也犯下了很多错误，甚至在某些维度上还不如读书少的人，这就说明书读多了有害，是书呆子。我们说这是一种反智思维的原因并不在于它所举出的例子不存在，而在于它把一切错误都归因为读书多、思考多，而不是读的不够多、思考的不够多。</span><strong><span>事实是客观的，但采取哪种归因方式却反映了一个人的主观选择和偏好。</span></strong><span>在这种反智的氛围里，人们觉得只要自己不思考就能保持灵活性，一旦思考和推理就变得教条了、不聪明了。按照某种曾经非常流行的观点，只有体力劳动才是最实在的最勤劳的，而芝诺、巴门尼德则属于啥事都不干的养尊处优的奴隶主阶级哲学家。然而，</span><strong><span>这种观点本质上是利用了人的愚昧和对权威的迷信，使许多人永远保持在不思考还自以为自己特别踏实的可悲状态里，不懂得思想上的勤劳是比身体的勤劳要更难得的，更需要勇气和智慧的。</span></strong><span>比如很多人宁愿承受身体上的高强度劳动，也要逃避思想上的追问与反思，足见后者比前者要困难的多。</span></p><p>&nbsp;</p><p><span>　　</span><strong><span>参考文献：</span></strong></p><p><span>R.柯朗, H.罗宾, 库兰特, et al：《什么是数学:对思想和方法的基本研究》</span></p><p><span>曹天元：《上帝掷骰子吗：量子物理史话》</span></p><p><span>黑格尔：《哲学史讲演录》</span></p><p>&nbsp;</p><p>&nbsp;</p><p><img src="https://mmbiz.qlogo.cn/mmbiz_jpg/t4JXCGKsCwiaYXVRoURFA58M3ibouicvanullQZ1ibOfZTZVQKWsUVB82BN98acFzJypSfAtfDlds0ZLNibkzxA64Fg/0?wx_fmt=jpeg" referrerpolicy="no-referrer" alt="img"></p><p><span>千叶映</span></p><p><span>赞赏金额是一个著名的数列~</span></p></div>
+</body>
+</html>

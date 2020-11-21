@@ -48,6 +48,14 @@
 
 [（四）《西方哲学史》阅读笔记 —— 火的哲学](https://yuliuu.com/Articles/wechat/HistOfWestPhil-4th) 
 
+[（五）《西方哲学史》阅读笔记 —— 巴门尼德](https://yuliuu.com/Articles/wechat/HistOfWestPhil-5th)
+
+[（六）《西方哲学史》阅读笔记 —— 芝诺](https://yuliuu.com/Articles/wechat/HistOfWestPhil-6th)
+
+[（七）《西方哲学史》阅读笔记 —— 阿那克萨戈拉](https://yuliuu.com/Articles/wechat/HistOfWestPhil-7th)
+
+[（八）《西方哲学史》阅读笔记 —— 当苏格拉底遇到孔子](https://yuliuu.com/Articles/wechat/HistOfWestPhil-8th)
+
 
 
 <br>该作者的其他篇目也有探讨内卷，焦虑，奋斗逼之类的话题：
