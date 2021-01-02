@@ -74,5 +74,5 @@
 
 
 
-[中国社会研究调查（第一期）](https://yuliuu.com/Articles/zhihu/CN_social_investigation_1.html)
+[中国社会研究调查（第一期）](https://yuliuu.com/Articles/zhihu/CN-social-investigation-1)
 
