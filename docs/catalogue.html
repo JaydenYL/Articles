@@ -2,14 +2,15 @@
 <html>
 <head>
 <meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
-<title>catalogue</title><link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; }
+<title>catalogue</title><link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; --title-bar-height: 20px; }
+.mac-os-11 { --title-bar-height: 28px; }
 html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
 body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857143; overflow-x: hidden; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; tab-size: 4; background-position: inherit inherit; background-repeat: inherit inherit; }
 iframe { margin: auto; }
 a.url { word-break: break-all; }
 a:active, a:hover { outline: 0px; }
 .in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
-#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; word-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 40px; }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; word-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
 #write.first-line-indent p { text-indent: 2em; }
 #write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
 #write.first-line-indent li { margin-left: 2em; }
@@ -77,6 +78,7 @@ div.hr:focus { cursor: none; }
 li div { padding-top: 0px; }
 blockquote { margin: 1rem 0px; }
 li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
 li { margin: 0px; position: relative; }
 blockquote > :last-child { margin-bottom: 0px; }
 blockquote > :first-child, li > :first-child { margin-top: 0px; }
@@ -86,7 +88,6 @@ blockquote > :first-child, li > :first-child { margin-top: 0px; }
   body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
   #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
   .typora-export * { -webkit-print-color-adjust: exact; }
-  html.blink-to-pdf { font-size: 13px; }
   .typora-export #write { break-after: avoid; }
   .typora-export #write::after { height: 0px; }
   .is-mac table { break-inside: avoid; }
@@ -100,6 +101,7 @@ p > .md-image:only-child { display: inline-block; width: 100%; }
 #write .MathJax_Display { margin: 0.8em 0px 0px; }
 .md-math-block { width: 100%; }
 .md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
 [contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
 .md-task-list-item { position: relative; list-style-type: none; }
 .task-list-item.md-task-list-item { padding-left: 0px; }
@@ -150,13 +152,16 @@ table tr th { border-bottom-width: 0px; }
 video { max-width: 100%; display: block; margin: 0px auto; }
 iframe { max-width: 100%; width: 100%; border: none; }
 .highlight td, .highlight tr { border: 0px; }
-svg[id^="mermaidChart"] { line-height: 1em; }
 mark { background-color: rgb(255, 255, 0); color: rgb(0, 0, 0); background-position: initial initial; background-repeat: initial initial; }
 .md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
 mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
 @media print { 
   .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
 }
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-require-zoom-fix foreignObject { font-size: var(--mermaid-font-zoom); }
 
 
 :root {
@@ -352,24 +357,24 @@ table tr:nth-child(2n),
 thead {
     background-color: #f8f8f8;
 }
-table tr th {
+table th {
     font-weight: bold;
     border: 1px solid #dfe2e5;
     border-bottom: 0;
     margin: 0;
     padding: 6px 13px;
 }
-table tr td {
+table td {
     border: 1px solid #dfe2e5;
     margin: 0;
     padding: 6px 13px;
 }
-table tr th:first-child,
-table tr td:first-child {
+table th:first-child,
+table td:first-child {
     margin-top: 0;
 }
-table tr th:last-child,
-table tr td:last-child {
+table th:last-child,
+table td:last-child {
     margin-bottom: 0;
 }
 
@@ -539,10 +544,10 @@ header, .context-menu, .megamenu-content, footer{
     background: #999;
 }
 
- .typora-export li, .typora-export p, .typora-export,  .footnote-line {white-space: normal;} 
+ :root {--mermaid-font-zoom:1em ;}  .typora-export li, .typora-export p, .typora-export,  .footnote-line {white-space: normal;} 
 </style>
 </head>
 <body class='typora-export'>
-<div id='write'  class=''><h1><a name="articleshttpsyuliuucomarticles" class="md-header-anchor"></a><a href='https://yuliuu.com/Articles'><span>Articles</span></a></h1><br><br><p><span>希望读者们能在心理学，哲学和文学之中寻到些许慰藉吧。</span></p><br><h3><a name="i--微信公众号文章" class="md-header-anchor"></a><span>I  微信公众号文章</span></h3><br><p><span>若是没有时间去啃《精神现象学》这种大部头 ， 不妨看看以下的文章：</span></p><p><a href='https://yuliuu.com/Articles/wechat/1st'><span>（一）《精神现象学》句读第三卷读书笔记</span></a></p><p><a href='https://yuliuu.com/Articles/wechat/2nd'><span>（二）《精神现象学》句读第三卷——超强的学习能力是怎样炼成的</span></a></p><p><a href='https://yuliuu.com/Articles/wechat/3rd'><span>（三）《精神现象学》句读第三卷读书笔记——为什么有自我意识才能懂得爱别人？</span></a></p><p><a href='https://yuliuu.com/Articles/wechat/4th'><span>（四）《精神现象学》句读第三卷——怎样理解自己内心的欲望？</span></a></p><p><a href='https://yuliuu.com/Articles/wechat/5th'><span>（五）《精神现象学》读书笔记——过于在意他人的评价怎么办？</span></a></p><p><a href='https://yuliuu.com/Articles/wechat/6th'><span>（六）《精神现象学》读书笔记——超越内卷的出路在哪</span></a></p><p><a href='https://yuliuu.com/Articles/wechat/7th'><span>（七）《精神现象学》笔记——怎样学会批判性思考？</span></a></p><p><a href='https://yuliuu.com/Articles/wechat/8th'><span>（八）怀疑与伤感——生命如何从虚无中确立自己？</span></a></p><p><a href='https://yuliuu.com/Articles/wechat/9th'><span>（九）个性与人格：什么才是为自己负责？</span></a></p><p><a href='https://yuliuu.com/Articles/wechat/10th'><span>（十）融合与孤独：从《三国演义》到《蝙蝠侠：黑暗骑士》</span></a><span> </span></p><p><a href='https://yuliuu.com/Articles/wechat/11th'><span>（十一）原罪与自由：从俄狄浦斯看西方道德观念</span></a><span> </span></p><p><a href='https://yuliuu.com/Articles/wechat/12th'><span>（十二）从僧侣到艺术家：不幸的意识如何与现实和解？</span></a></p><p>&nbsp;</p><p><br><span>《西方哲学史》阅读笔记：</span></p><p><a href='https://yuliuu.com/Articles/wechat/HistOfWestPhil-1st'><span>（一）《西方哲学史》阅读笔记 —— 从希腊哲学说起</span></a></p><p><a href='https://yuliuu.com/Articles/wechat/HistOfWestPhil-2nd'><span>（二）《西方哲学史》阅读笔记 —— 泰勒斯的“水”</span></a><span> </span></p><p><a href='https://yuliuu.com/Articles/wechat/HistOfWestPhil-3rd'><span>（三）《西方哲学史》阅读笔记 —— 什么是数学 </span></a></p><p><a href='https://yuliuu.com/Articles/wechat/HistOfWestPhil-4th'><span>（四）《西方哲学史》阅读笔记 —— 火的哲学</span></a><span> </span></p><p><a href='https://yuliuu.com/Articles/wechat/HistOfWestPhil-5th'><span>（五）《西方哲学史》阅读笔记 —— 巴门尼德</span></a></p><p><a href='https://yuliuu.com/Articles/wechat/HistOfWestPhil-6th'><span>（六）《西方哲学史》阅读笔记 —— 芝诺</span></a></p><p><a href='https://yuliuu.com/Articles/wechat/HistOfWestPhil-7th'><span>（七）《西方哲学史》阅读笔记 —— 阿那克萨戈拉</span></a></p><p><a href='https://yuliuu.com/Articles/wechat/HistOfWestPhil-8th'><span>（八）《西方哲学史》阅读笔记 —— 当苏格拉底遇到孔子</span></a></p><p>&nbsp;</p><p><br><span>该作者的其他篇目也有探讨内卷，焦虑，奋斗逼之类的话题：</span></p><p><a href='https://yuliuu.com/Articles/wechat/4-24'><span>“打工是不可能打工的”</span></a></p><p><a href='https://yuliuu.com/Articles/wechat/4-14'><span>远离自我贬低的氛围</span></a></p><p><a href='https://yuliuu.com/Articles/wechat/3-12'><span>有哪些典型的「学生思维」？</span></a></p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p></div>
+<div id='write'  class=''><h1><a name="articleshttpsyuliuucomarticles" class="md-header-anchor"></a><a href='https://yuliuu.com/Articles'><span>Articles</span></a></h1><br><br><p><span>希望读者们能在心理学，哲学和文学之中寻到些许慰藉吧。</span></p><br><h2><a name="i--微信公众号文章" class="md-header-anchor"></a><span> I  微信公众号文章</span></h2><br><p><span>若是没有时间去啃《精神现象学》这种大部头 ， 不妨看看以下的文章：</span></p><p><a href='https://yuliuu.com/Articles/wechat/1st'><span>（一）《精神现象学》句读第三卷读书笔记</span></a></p><p><a href='https://yuliuu.com/Articles/wechat/2nd'><span>（二）《精神现象学》句读第三卷——超强的学习能力是怎样炼成的</span></a></p><p><a href='https://yuliuu.com/Articles/wechat/3rd'><span>（三）《精神现象学》句读第三卷读书笔记——为什么有自我意识才能懂得爱别人？</span></a></p><p><a href='https://yuliuu.com/Articles/wechat/4th'><span>（四）《精神现象学》句读第三卷——怎样理解自己内心的欲望？</span></a></p><p><a href='https://yuliuu.com/Articles/wechat/5th'><span>（五）《精神现象学》读书笔记——过于在意他人的评价怎么办？</span></a></p><p><a href='https://yuliuu.com/Articles/wechat/6th'><span>（六）《精神现象学》读书笔记——超越内卷的出路在哪</span></a></p><p><a href='https://yuliuu.com/Articles/wechat/7th'><span>（七）《精神现象学》笔记——怎样学会批判性思考？</span></a></p><p><a href='https://yuliuu.com/Articles/wechat/8th'><span>（八）怀疑与伤感——生命如何从虚无中确立自己？</span></a></p><p><a href='https://yuliuu.com/Articles/wechat/9th'><span>（九）个性与人格：什么才是为自己负责？</span></a></p><p><a href='https://yuliuu.com/Articles/wechat/10th'><span>（十）融合与孤独：从《三国演义》到《蝙蝠侠：黑暗骑士》</span></a><span> </span></p><p><a href='https://yuliuu.com/Articles/wechat/11th'><span>（十一）原罪与自由：从俄狄浦斯看西方道德观念</span></a><span> </span></p><p><a href='https://yuliuu.com/Articles/wechat/12th'><span>（十二）从僧侣到艺术家：不幸的意识如何与现实和解？</span></a></p><p>&nbsp;</p><p><br><span>《西方哲学史》阅读笔记：</span></p><p><a href='https://yuliuu.com/Articles/wechat/HistOfWestPhil-1st'><span>（一）《西方哲学史》阅读笔记 —— 从希腊哲学说起</span></a></p><p><a href='https://yuliuu.com/Articles/wechat/HistOfWestPhil-2nd'><span>（二）《西方哲学史》阅读笔记 —— 泰勒斯的“水”</span></a><span> </span></p><p><a href='https://yuliuu.com/Articles/wechat/HistOfWestPhil-3rd'><span>（三）《西方哲学史》阅读笔记 —— 什么是数学 </span></a></p><p><a href='https://yuliuu.com/Articles/wechat/HistOfWestPhil-4th'><span>（四）《西方哲学史》阅读笔记 —— 火的哲学</span></a><span> </span></p><p><a href='https://yuliuu.com/Articles/wechat/HistOfWestPhil-5th'><span>（五）《西方哲学史》阅读笔记 —— 巴门尼德</span></a></p><p><a href='https://yuliuu.com/Articles/wechat/HistOfWestPhil-6th'><span>（六）《西方哲学史》阅读笔记 —— 芝诺</span></a></p><p><a href='https://yuliuu.com/Articles/wechat/HistOfWestPhil-7th'><span>（七）《西方哲学史》阅读笔记 —— 阿那克萨戈拉</span></a></p><p><a href='https://yuliuu.com/Articles/wechat/HistOfWestPhil-8th'><span>（八）《西方哲学史》阅读笔记 —— 当苏格拉底遇到孔子</span></a></p><p>&nbsp;</p><p><br><span>该作者的其他篇目也有探讨内卷，焦虑，奋斗逼之类的话题：</span></p><p><a href='https://yuliuu.com/Articles/wechat/4-24'><span>“打工是不可能打工的”</span></a></p><p><a href='https://yuliuu.com/Articles/wechat/4-14'><span>远离自我贬低的氛围</span></a></p><p><a href='https://yuliuu.com/Articles/wechat/3-12'><span>有哪些典型的「学生思维」？</span></a></p><p>&nbsp;</p><p>&nbsp;</p><h2><a name="ii-知乎" class="md-header-anchor"></a><span>II 知乎</span></h2><p>&nbsp;</p><p><a href='https://yuliuu.com/Articles/zhihu/CN_social_investigation_1.html'><span>中国社会研究调查（第一期）</span></a></p><p>&nbsp;</p></div>
 </body>
 </html>
