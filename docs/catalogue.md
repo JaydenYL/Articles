@@ -76,3 +76,6 @@
 
 [中国社会研究调查（第一期）](https://yuliuu.com/Articles/zhihu/CN-social-investigation-1)
 
+<br>
+
+[我 46 岁了还没结婚，一想起就很悲观而且抑郁想哭，该怎样调整这种心态呢？](https://yuliuu.com/Articles/zhihu/Temporary-Bloom-Of-Destiny)
