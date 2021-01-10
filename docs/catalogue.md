@@ -79,3 +79,8 @@
 <br>
 
 [我 46 岁了还没结婚，一想起就很悲观而且抑郁想哭，该怎样调整这种心态呢？](https://yuliuu.com/Articles/zhihu/Temporary-Bloom-Of-Destiny)
+
+<br>
+
+[年轻人的痛苦来源于哪里？](https://yuliuu.com/Articles/zhihu/Tht-Pain-Of-Youth)
+
