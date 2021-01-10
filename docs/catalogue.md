@@ -82,5 +82,5 @@
 
 <br>
 
-[年轻人的痛苦来源于哪里？](https://yuliuu.com/Articles/zhihu/Tht-Pain-Of-Youth)
+[年轻人的痛苦来源于哪里？](https://yuliuu.com/Articles/zhihu/The-Pain-Of-Youth)
 
