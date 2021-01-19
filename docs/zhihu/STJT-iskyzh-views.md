@@ -8,9 +8,7 @@
 
 <img src="https://i.loli.net/2021/01/19/QSDx94NAvJwylrW.jpg" alt="img_1.jpg" style="zoom:50%;" />
 
-<br>
-
-<br>
+<br><br>
 
 迟先生的心路历程 ：https://zhuanlan.zhihu.com/p/345269981 （备用 ： https://yuliuu.com/Articles/zhihu/SJTU-cs-iskyzh.html  )
 
