@@ -96,7 +96,7 @@
 
 <br>
 
-[学霸是不是因为小时候有成绩好带来的优越感，所以一直保持这种努力学习的干劲？ - 大头帮主的回答 - 知乎]( https://www.zhihu.com/question/26925157/answer/36699896)
+[学霸是不是因为小时候有成绩好带来的优越感，所以一直保持这种努力学习的干劲？ - 大头帮主的回答 - 知乎]( https://yuliuu.com/Articles/zhihu/From_Study_to_life)
 
 <br>
 
