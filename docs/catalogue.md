@@ -90,7 +90,9 @@
 
 [如何评价上海交通大学 18 级计算机系第一名「迟先生」的言论？](https://yuliuu.com/Articles/zhihu/STJT-iskyzh-views)
 
+<br>
 
+[motivation-positive-feedback-loop](https://yuliuu.com/Articles/others/motivation-positive-feedback-loop)
 
 
 
