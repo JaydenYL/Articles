@@ -1,0 +1,569 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>From_Study_to_life</title><link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; --title-bar-height: 20px; }
+.mac-os-11 { --title-bar-height: 28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857143; overflow-x: hidden; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; tab-size: 4; background-position: inherit inherit; background-repeat: inherit inherit; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; word-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) { 
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font-family: inherit; font-size: inherit; font-style: inherit; font-variant-caps: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right-width: 0px; background-color: inherit; }
+.CodeMirror-linenumber { }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; position: relative !important; background-position: inherit inherit; background-repeat: inherit inherit; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; background-position: 0px 0px; background-repeat: initial initial; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print { 
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background-color: rgb(204, 204, 204); display: block; overflow-x: hidden; background-position: initial initial; background-repeat: initial initial; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) { 
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background-color: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; background-position: initial initial; background-repeat: initial initial; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; }
+a.md-print-anchor { white-space: pre !important; border: none !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; text-shadow: initial !important; background-position: 0px 0px !important; background-repeat: initial initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
+.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom-width: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background-color: rgb(255, 255, 0); color: rgb(0, 0, 0); background-position: initial initial; background-repeat: initial initial; }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
+@media print { 
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-require-zoom-fix foreignObject { font-size: var(--mermaid-font-zoom); }
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+/* open-sans-regular - latin-ext_latin */
+  /* open-sans-italic - latin-ext_latin */
+    /* open-sans-700 - latin-ext_latin */
+    /* open-sans-700italic - latin-ext_latin */
+  html {
+    font-size: 16px;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+
+/*@media print {
+    .typora-export h1,
+    .typora-export h2 {
+        border-bottom: none;
+        padding-bottom: initial;
+    }
+
+    .typora-export h1::after,
+    .typora-export h2::after {
+        content: "";
+        display: block;
+        height: 100px;
+        margin-top: -96px;
+        border-top: 1px solid #eee;
+    }
+}*/
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #dfe2e5;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border-top: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table th:first-child,
+table td:first-child {
+    margin-top: 0;
+}
+table th:last-child,
+table td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+    background-color: #f3f4f4;
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+    pre {
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+.html-for-mac .context-menu {
+    --item-hover-bg-color: #E6F0FE;
+}
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+ :root {--mermaid-font-zoom:1em ;}  .typora-export li, .typora-export p, .typora-export,  .footnote-line {white-space: normal;} 
+</style>
+</head>
+<body class='typora-export'>
+<div id='write'  class=''><p><a href='https://www.zhihu.com/people/da-tou-bang-zhu'><img src="https://pic1.zhimg.com/085f36ce4_xs.jpg?source=1940ef5c" referrerpolicy="no-referrer" alt="大头帮主"></a></p><p><a href='https://www.zhihu.com/people/da-tou-bang-zhu'><span>大头帮主</span></a></p><p><span>2015 年度荣誉答主</span></p><p>&nbsp;</p><p>&nbsp;</p><p><a href='https://www.zhihu.com/people/skygor'><span>承天峙</span></a><span>、</span><a href='https://www.zhihu.com/people/chen-wei-37-75'><span>趁未有梦往</span></a><span>、</span><a href='https://www.zhihu.com/people/zhang-shuo-can'><span>张土土</span></a><span>、</span><a href='https://www.zhihu.com/people/tang-long-ke'><span>唐珑珂</span></a><span>、</span><a href='https://www.zhihu.com/people/mount_cristo'><span>edmond</span></a><span> 等 37,492 人赞同了该回答</span></p><p>&nbsp;</p><p><span>随着年岁增长，&quot;学霸“这个词，跟我脑门上的发迹线一样，在我的生活中渐行渐远了。不过，我依然清晰的记得，20年前那个下午，那通电话。- “兄弟，” 电话这头的我略带紧张的问道：“怎么样？多少？”</span>
+<span>-</span><span> “不是太好，才861......你多少？”</span>
+<span>-</span><span> “我......我856......&quot;</span>
+<span>-</span><span> “哇，恭喜恭喜，这么高分！”</span>
+<span>-</span><span> “滚犊子！”</span></p><p><span>然后两个人在电话里没心没肺的笑了。第二天的报纸上，公布了广州市当年高考状元榜（上古时代特热衷搞这套玩意儿）。小陆同学总分第五名。我紧挨着他，第六名。</span></p><p><span>如果，高考有以同桌为单位的双打比赛，那我们应该是本届的全省冠军了。</span></p><p><span>不过，我们是截然不同的两种选手，走着不同的道路。正如我们的人生，只在高中三年的课桌前，有了一点交集。</span><img src="https://pic1.zhimg.com/80/f9326e4da96c2365690187e4e8e427ae_1440w.jpg?source=1940ef5c" referrerpolicy="no-referrer" alt="img">
+<span>-----------------初中，同级不同班。令人惊奇的是，在那三年里面，我们彼此竟从未见过面。</span></p><p><span>他从入学起便是受人瞩目的学科明星。早早通过奥赛在我们这所市重点中学里面树立了江湖地位。数学，物理，化学，生物，外语，除了体育，几乎所有学科的竞赛他都要掺一脚。</span></p><p><span>我则是.....nobody。初中入学，路人甲一枚。成绩稳定在班10多名开外，年级百多名。身体还没长开，连体育都有挂科的项目。窝在角落里，用着不起眼的书包文具，穿着发型毫无特点，老师不会注意，同学们也不太爱搭理。</span></p><p><span>假如说，我多少还有点与众不同之处，也许就是性格上特别的骄傲自大了。不时会说出些不知天高地厚的自夸的话，在一个所有评判标准都唯考试成绩而论的环境里，只会惹来周围人士的嘲讽讪笑。</span></p><p><span>哦，差点忘记了，因为会画些小画，被班主任分配去出墙报。</span></p><p><span>“老师，我可以不做这个么.....我想多花一些时间在学习上面.....”</span></p><p><span>“什么？集体分配给你的事情，你都不愿意做么？”</span></p><p><span>看着老师严厉的目光，我只好默默接受了这个任务。</span></p><p><span>对于一个才华欠奉的人来说，那绝对是苦差事。每当同学们放学回家，才是我开始干活的时候。跟三两同学把桌子在墙报黑板前拼好，爬上去，擦干净上一期的内容，画画，套用着平庸的模板，写着乏味寡淡的文字。有时候要几天才能完成一次任务。回家之时，已是华灯初上，骑着破单车，行走于夜幕之中。然后......迎接第二天大家的评头品足，或者，什么都没有。</span><img src="https://pic4.zhimg.com/80/95cca5fd606ce03f287efb945d302b51_1440w.jpg?source=1940ef5c" referrerpolicy="no-referrer" alt="img"></p><p>&nbsp;</p><p><span>一个阴冷的下午，自习课。许是课室里过于吵闹，班主任走进来怒喝，骂了几句。可能那天我的造型看起来比较温顺，她突然指着我说：“大家好好看看大头，他虽然学习一般，出的墙报普普通通，但起码他知道做好自己！我不指望你们像隔壁班小陆那样，你们本本分分学会做好自己就够了！”</span></p><p><span>课室里忽然变得鸦雀无声，仿佛空无一人。然后，在某个角落里，传来不知谁的低声嗤笑。</span></p><p><span>这算是在夸我么？我的存在感，难道就只是课室后面那两周一版，无比蹩脚的墙报么？</span></p><p><span>小陆？已经有我这么个路人甲躺枪不是够了么，为什么还要拉一个全明星球员来垫背？</span></p><p><span>所以，我就需要甘于自己平庸的天资，去接受这样的位置，对吧？</span></p><p><span>好的，我明白了。</span></p><p><span>我应该感谢班主任的这番话，因为它帮助我开启了人生的另一种模式，一种我从来不知道自己拥有的模式：</span></p><p><span>认真去研究规则，然后，找到漏洞，战胜它。</span></p><p><span>在这个地方，这里的规则，至少我所理解的规则，就只有一条：你只有凭着考试成绩冲到最前面去，才能获得与别人谈笑风生，平起平坐的资格。</span></p><p><span>我依然不善言辞，没法在短时间里面提高自己的语文技巧和写作能力；我对外语兴趣欠奉，始终不得其门而入；对于数学，我依旧无可奈何，这似乎也不是短时间能够解决的问题......可是，考试总分的评定，还包括一门：政治。</span></p><p><span>没有任何人会喜欢这门课。老师照本宣科，同学草草应付；考试题目乏味，答案千篇一律。谁都知道它不在会考范围内，所以没人会在上面浪费时间。可是，不知是否出于教育局的规定，期末总分统计排名时，却会把这门毫无意义的课程，一并的计算进去。</span></p><p><span>只要排到年级前12名，便可以获得奖学金——13元，等于该学期的学费。</span></p><p><span>我花了点时间，研究了一下考试题目与课本，得出一个结论：只要我在考试的时候，把课本完整的抄一遍，是的，只要抄对章节，就可以获得满分。当然，我不会真的拿课本出来抄，那是做弊。我抄的是脑海里的课本。</span></p><p><span>于是，在不为人知的时候，我把整本政治课本一字不漏的背了下来。靠着这个粗暴简单不讲道理的办法，我让自己的总分足足涨了近20分。</span></p><p><span>在接下来的期中考试， 其他科目没有大起色的情况下，居然大大咧咧的杀进了全班前五名，离获取奖学金资格已经非常接近了。在这种变化刚出现的时候，其实没有引起多少人的关注。路人乙丙丁们多半只是说：政治满分哦，你是有多爱这门课啊？</span><img src="https://pic2.zhimg.com/80/e8458ef0f1d17380f1d6fbcdde859410_1440w.jpg?source=1940ef5c" referrerpolicy="no-referrer" alt="img"></p><p><span>而我却没打算就此停下来。要走到小陆那个层级的圈子里面去，我还需要做得更多。</span></p><p><span>我开始钻研其他科目的“漏洞”。一眼望去，学海茫茫，这看起来真不是机械式的死记硬背能够解决的问题。我依然会在某次测验中考砸数学，或者写出篇低分作文，或者连错5、6道英语完形填空。</span></p><p><span>然而，还是被我发现了漏洞所在。这种教育模式，他评定的标准就只有“考试成绩”。</span></p><p><span>只要是考试，就要靠老师们去“出题”。学科知识是如此的漫无边际，但老师的题库，却非常有限。</span></p><p><span>我总觉得，身边某位同学，其能力远不如我，却总能在数学上获得比我高得多的分数。不，绝对不是我过于自信，这里面一定有我所不了解的秘密。反复思索了很久，终于搞清楚了一件事情，一件我本该早就觉悟的事情：他们都买了一本老师推荐的习题集A，而我却因为手头拮据，买了本书名类似的习题集B。</span></p><p><span>两本习题，水平孰高孰低我无法判断。但显然，老师的出题套路，来自于A。</span></p><p><span>身边的这些同学，他们也只不过是在重复着机械式的答题模式，而已！</span></p><p><span>为了验证自己的推测，我想方设法，跑去同在一个学校读书，高我一届的邻居那里，弄来了一本。用了一晚上，我把那本皱巴巴，连封面都没有的习题集，认真的看了一遍，在里面找到了我此前测验碰过壁的所有题目的原型！</span></p><p><span>我，略带阴险的笑了。</span></p><p><span>在这样一个年纪，我已经完全想明白了，这特么的真的不是什么具有积极意义的学习方法。这种评价体系，对于学生理解学科知识几乎毫无帮助。它不要求你有太多的创造力，却将自己包装成壁垒森严，充满不确定性因素的学术禁区。他只是粗暴简单的把学生浇筑进一个模子里去，通过机械化的训练，去适应那种既定的竞争标准。你考试高分，低分，并不直接代表你对于那门学科有多么精通，他唯一能够百分百证明的，只不过是：你会做“特定”的题目。</span></p><p><span>不，我不是在抱怨，甚至，我还有点高兴。我就是nobody，一个天资极其有限的普通人。对于这个体系，这个规则，我太过弱小了。但我要感谢这个规则，它把学习本应该拥有的其他所有可能性都掐死了，让我能够专注于一条简单的路径，然后，往上爬。</span></p><p><span>我甚至开始不怎么听课了。我只是埋头研究习题集。我动手做得非常少，我只是看，看题目，再看答案。一本看完，再去弄一本来看；别人去玩，去踢足球，去早恋拍拖，去游戏厅，去参加学生会游园会，那些时间里，我全部都在“看”题，一本本的看.....</span></p><p>&nbsp;</p><p><img src="https://pic1.zhimg.com/80/6f73892e37d495f58336a2a2833a9fc1_1440w.jpg?source=1940ef5c" referrerpolicy="no-referrer" alt="img"></p><p>&nbsp;</p><p><span>毫无征兆的，我在初中二年级第一个学期的这个期末，成为了全班第一。</span></p><p><span>比肩小陆，我如愿以偿的拿到了奖学金。</span></p><p><span>我甚至还拿到了校运会的金牌。800米冠军。很简单，挑一个没人有兴趣的项目，轻虐一下自己，就可以了。简单，粗暴，不需要任何天赋。</span></p><p><span>可是，华丽的考试成绩单背后，我依然感受到，在权威的眼里，我只是个普通学生。老师们是规则体系之中的人，绝不代表他们会认同这种价值体系。他们清楚的知道，谁是依靠规则漏洞上位，谁，拥有实打实的硬实力，那种我们称之为天赋的东西。</span></p><p><span>小陆，应该就是这样一类人。我想，他不需要靠做题，不需要利用规则漏洞，便可以轻而易举的站到我们这群同龄人的前面去。</span></p><hr /><p><span>我是以本校全年级积点第一名的成绩，保送进的高中。在领取入学通知书的那天，我在班级分派榜上看到了小陆的名字。</span></p><p><span>瘦小，白净，神情悠然，却能感觉到内心的孤傲。这是我看到他的第一印象。</span></p><p><span>他并不认识我。这很正常。除了考试，我没有参加过任何学科竞赛小组，也许就是个奇奇怪怪的人而已。</span></p><p><span>我依然被分配去出墙报。有些事情，叫做只要你一直在坚持，大概多少都会有所收获。在这个行当里摸索了足足三年，我出的墙报已经不再那么蹩脚了，开始有一点自己的套路。</span></p><p><span>有一天，大家走进课室，发现背景墙上用粉笔画了一幅巨大的“山海关”。这是国庆专题。在那个没有电脑，没有网络，更不会有手机，甚至有线电视都远未普及的年代，这样一幅横4米高2米的画，多少还是有点震撼力的。</span></p><p><span>高中老师比初中老师活泼太多了，居然把我叫到讲台前，接受大家的掌声。</span></p><p><span>长到这个年岁，在这个体系里生存了这么些年，因为深谙规则，我刷存在感的方式已经不止这么一种了。没过几天，校运会，我拿了三块金牌。虽然一个人限制报两个项目，我却得益于初中会考，当年的专项体育尖子大都去了别的学校，而拿到了第三枚金牌：短跑项目接力冠军（团体项目不限制报名次数)；</span></p><p><span>写了一篇“鸡汤文”，虽然笔法拙劣，行文晦涩，却得了个不大不小的校际征文比赛奖；</span></p><p><span>各种科目的考试，更是小菜一碟，没费什么大的力气，几乎全部是全班第一，唯一输给小陆的一科，是英语。而我们可爱的班主任可能是嫌这个游戏还不够刺激。在某个星期班会课上，他宣布：“大头，你搬去那边坐。”同学堆里竟然响起一片哗声——</span></p><p><span>就这样，我和小陆成了同桌。</span></p><p><span>接着，成了死党。</span></p><p><span>因为，两个不需要听课的人坐在一起，为了消磨那些看起来非常无聊的时间，会不停的交流彼此的想法，从天亮聊到天黑，筹划着一些另类而有趣的事情。</span></p><p><span>我早该想到，以他这样一个绝顶聪明的头脑，怎么可能会不知道规则漏洞的存在，并且善加利用呢？</span></p><p><span>我心悦诚服的承认他的天赋，是他除了应付各种考试之外，还能够在真正的专业学科领域游刃有余。仅仅是高一，附近大学就已经有慕名前来要招他入学的人士，希望以丰厚条件锁定他的志愿选择。</span></p><p><span>甚至于，在人情世故上，他也有着远胜于我的世故和成熟。他游走在团委与学生会中间——一个我从来不愿涉足的领域——组织各种活动，在同学中有着不一样的威信和号召力；他参加合唱团，参加省港辩论大赛，中文的，英文的；他甚至敢于对抗那些来自老师团体的庸腐陈旧的观点，在一些公开场合阐述自己的立场。他敢于说“不”，并且让大家都站在他的一边，这真的是很酷的事情!</span></p><p><span>所以，我终于明白了“真相”：即使我不择手段的征服了眼前的这一个体系的规则，那也只是自欺欺人而已。在另一个更为宏大并且现实的体系里面，我还只是原来的那个我：“nobody&quot;。</span></p><p><span>这一个更宏大的体系，我们称之为：生活。于是，一切又从“0”开始。</span></p><p>&nbsp;</p><hr /><p>&nbsp;</p><p><span>“为什么去华南理工建筑系？”</span></p><p><span>“不想我出墙报的这门手艺被埋没了啊......”</span></p><p><span>“我是问为什么是华南理工！”</span></p><p><span>“离家近，回家饭菜比较好吃......”</span></p><p><span>沉默......</span></p><p><span>“为什么是清华计算机？”轮到我提问了。</span></p><p><span>“因为中山大学说不管考成啥样可以保证我有书读啊.....”</span></p><p><span>“所以你是不是应该感谢我不考啊？”</span></p><p><span>“关你球事！”</span></p><p>&nbsp;</p><hr /><p>&nbsp;</p><p><span>读大学的时候，天南地北，我们就再没碰过面了。</span></p><p><span>寄了一张明信片给我，居然是清华的建筑系馆的素描。</span></p><p><span>“你来这里大概会好。刚举行了乒乓球赛，你知道的，我不擅长这个。”他向我描述着在清华的生活。</span></p><p><span>字里行间，流露出些许落寞。大概是到了一个更高层级的地方，见识了更多天才，真正感受到了在天赋上的“被碾压”，以及对于自身才华能力的疑虑。</span></p><p><span>“没事儿。我这边忙的一逼。建筑系真不是人呆的地方，现在我唯一的目标就是能顺利的活下来。”</span></p><p><span>这就是仅有的不多的几次对话了。</span></p><p>&nbsp;</p><hr /><p>&nbsp;</p><p>&nbsp;</p><p><img src="https://pic3.zhimg.com/80/49f3ed845c08f158957419759dab918f_1440w.jpg?source=1940ef5c" referrerpolicy="no-referrer" alt="img"></p><p>&nbsp;</p><p>&nbsp;</p><p><span>然而谁也不会想到，再次见面，已经是10多年后。我在环美旅行的路上。康涅狄格，纽黑文。</span></p><p><span>我走出火车站，循着他在手机里的指引，笑着打开车门，坐上他的车。</span></p><p><span>岁月并没有给我们带来任何的疏离感。我坐在副驾驶座，聊着天，开着同样风格的玩笑，觉得也就是当年同桌时那般模样。唯一有所不同的，只是窗外的景致变幻，婆娑的树影，初秋时节新英格兰的蓝天白云。</span></p><p><span>“本地有个相当不错的比萨店，我们到那里午餐吧？” 他扶了扶眼镜。</span>
+<span>“为什么跑到耶鲁来？”</span>
+<span>“你......能不能说话的时候考虑一下上下文？”</span>
+<span>“为什么到耶鲁来？”</span>
+<span>“因为不敢申CalTech。”</span>
+<span>“呵呵，你也有今天！”</span></p><p><span>他摇了摇头，“能人太多了，毫无办法。耶鲁给了全奖，还是来这里算了。”</span></p><p><span>“你呢？怎么跑洛杉矶去了？”</span>
+<span>“哈佛把我拒了，UCLA给offer。”</span>
+<span>“哦......”</span></p><p><span>“听说你现在画画已经老牛逼了？”</span>
+<span>“别，就是会倒腾点渲染软件而已。没啥特别的。你在倒腾啥？”</span>
+<span>“我嘛，在做渲染器啊，最近刚做了一个带时间计算功能的，可以推测20年后物品的风化衰老情况，你要不要试试?”</span></p><p><span>“滚，离我远点，我不想听！”“有什么打算？旅行的下一站是？”</span>
+<span>&quot;回国开业赚钱去了啊，你呢？”</span>
+<span>“可能是去西雅图吧，还不清楚......”</span></p><p><span>在这个意大利餐馆，我们喝着可乐，大口大口吃着批萨，聊着各种经年累月积攒下来还未来得及交流过的琐事。</span></p><p><span>这，是一个非常愉快的下午。</span></p><p>&nbsp;</p><h2><a name="imghttpspic2zhimgcom80ab733c29bdfdb5991e5fecfdd8f8d39f1440wjpgsource1940ef5c" class="md-header-anchor"></a><img src="https://pic2.zhimg.com/80/ab733c29bdfdb5991e5fecfdd8f8d39f_1440w.jpg?source=1940ef5c" referrerpolicy="no-referrer" alt="img"></h2><p>&nbsp;</p><p><span>注：文中照片除特别注明外均摄自耶鲁大学。摄影：大头帮主。</span></p><p><span>附注：1、关于小陆的故事，我还专门写过一篇《大头人物志》，可惜虎扑步行街改版的时候被删光了。如需本尊求证，请致信美国华盛顿州西雅图市微软总部DirectX12开发团队，不谢。</span></p><p><span>2、关于纽黑文，也写过一篇游记，是《火车环美旅行》的其中一章。命运......同上。</span></p><p><span>3、我在华南理工建筑系的学生和校友堆里，远远排不上号；建筑红楼里有太多让我敬畏的人；忝列其间成为校友一员，我很荣幸。</span></p><p><span>4、屁大点事儿，又不是抢鸡蛋，居然还有排着队上门评论说假的，我也真是醉了。</span></p><br><br><p><img src="https://pic1.zhimg.com/80/d1a180b2851b3aefd94c19755137e883_1440w.jpg?source=1940ef5c" referrerpolicy="no-referrer" alt="img"><span>（</span><em><span>2014年高考前夕，某已回中学当老师的前高中同班同学，从旧档案翻出来一张报纸，拍完照发给我，勾起了我对往事的回忆。</span></em><span>）</span></p><hr /><p>&nbsp;</p><p><span>以下是获奖感言。没兴趣的同学赶紧散了吧。谢谢知乎日报再次推荐。特别鸣谢日报美编（作为设计工作室老板，超想挖脚………）题图选配水准一贯赞。</span></p><p><span>知乎上面未成年人的比例远远超乎我的想象，让我着实吃了一惊。我不得不审慎的写一下本文的“阅读理解”——既是写给未参加高考的小盆友，也是写给明显语文没学好在评论里面寻求帮助的若干小头人。</span></p><p><span>关于本案，关于学霸为何努力读书的问题。 我写的答案，讲得很清楚，就是为了爬上去，为了取得和天才平等对话的机会，而拼老命的读书。云淡风轻的叙述背后多少血泪？假如真有人以为过程只是“轻虐”，那实在太天真了。我和小陆都不例外。 这个世界永远是公平的，一分耕耘一分收获。即使那些有个金爹的人，也会有担心其被抓去问话的一天。这个法则，对所有人都是如此，即使再有天分的所谓”天才“，亦然。</span></p><p><span>但到头来呢？与小陆成为朋友，面对了一个更加真实世界，我才发现对付考试的这种方法是如此可笑。正如文中所述，我告诉自己，体系本身可笑，要有自知之明，不需要对抗，但更不要沉迷其中。以后要面对的那段&quot; 生活”的考试，才是需要一辈子认真奋斗的事情。（注意，这才叫鸡汤型说教！这种大道理休想我会写在正文答案里，只有PS才会读到哦，亲！）</span></p><p><span>在大学，在社会，无论是在国内还是国外，除了撰文回答这种题目或者自我缅怀一下往事，你主动在别人面前提自己高考有多高分，都是件可笑的 事情；假如一个所谓“学霸”只有在校学习成绩能拿来“炫耀”，那就更加可悲了。所以我写了一大堆跟主课业无关的东西，而正是这些杂艺，却恰恰成为日后生活 天平上的砝码。（当然，你们都知道我不是纯考试型学霸，因为我还组建了一个帮派。）至于我高考期间天天打篮球打到半夜这些事情，跟题目无关，不提也罢。 （注意，这才叫“炫耀”。）总会有人觉得学历是有多了不得的事情，一上来言必称清北复交才堪身价，殊不知其上还有各种世界名校，耶鲁之上，还有加州理工（文中写明CalTech）。然则，拿到这些学历，又如何？小陆告诉我，他最骄傲的事情，是一直在合唱团里面，从中国一直唱到了美国。昨天我特意到领英去翻，发现这厮在清华读研的时候还当上了计算机的学生会主席， 不知骗取了多少………总之一点都不屌丝，我上当了……</span></p><p><span>人最重要的命题，是学会生活。只有未知世事的学生，才会把考试当成一切。是的，这句话是说给曾经的我们，以及现在看这篇文字的小盆友们的。你们即使现在不懂，将来生活自会教你们懂。</span></p><p><span>要说现在，我早就过了拿学历说事的阶段了。我聘请员工更是从不问学历，只看实际能力。所以，那些说我拿这段往事来”装逼“的人可以消停一下么？这真的就 是”屁大”一点事情。孩子，行走江湖，靠的是扎扎实实的硬实力——经验，人脉，资金，专业能力。再华丽的履历表，不过就是个装饰品。实际工作生活里面甚至 还不如我在知乎上卖弄些小画管用。假如你仍然觉得我确实是在“装逼秀优越感&quot;，你说是，就是吧，我真的不拦你。也许，只有缺什么的人，才会在意别人秀什 么。</span></p><p><span>人真正需要的，是这样一个志向，就是努力掌握自己的命运，而不是满足于完成别人分配的角色。这也是我在答案中一再反复阐述的观点。不 要屈从于所谓的命运，一定要努力抗争。我是一个创业者，真正0存款白手起家，不靠天地爹娘，深知其中艰险。同样历尽艰辛，达到不需要看任何人脸色过活的层 级。要说真有什么值得炫耀，那就是现在的我，可以稍微不被生活的枷锁束缚，可以带领着一群年轻人自由自在的做着感兴趣的事情。难不成我的雇员会嫌我学历 低，自动减薪以示匹配？那就好了，说不定我后移的发际线就有救了。</span></p><p><span>最后，我想借 </span><a href='https://www.zhihu.com/people/c6d142818450b812b895d804a254e184'><span>@徐智涵</span></a><span> 先生在原案的评论，来说明我为何写下此文（真的很谢谢他，非常荣幸得到如此切中肯綮的点评。知乎很多厉害的人都特别低调，让我感到惭愧。）：</span></p><p>&nbsp;</p><blockquote><p><span>不管当年是霸是渣，时光已经一去不返。在这样一个阳光明媚的上午偶然间读到这样的文字，满满的回忆不禁瞬间涌上心头，湿了眼眶。想起很多过去的同学朋友， 不知不觉大家已经天南海北，在不同的国度、不同的阶层或是高端或是平凡地打点着不同的人生，唯有那些一起学习过的经历，像一条纽带，始终羁绊着岁月的情怀，不曾忘记。</span></p></blockquote><p><span>谢谢大家。</span></p><p>&nbsp;</p><p><a href='https://www.zhihu.com/question/26925157/answer/36699896'><span>编辑于 2015-01-14</span></a></p><p>&nbsp;</p></div>
+</body>
+</html>
