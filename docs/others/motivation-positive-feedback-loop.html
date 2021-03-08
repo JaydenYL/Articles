@@ -1,0 +1,553 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>motivation-positive-feedback-loop</title><link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; --title-bar-height: 20px; }
+.mac-os-11 { --title-bar-height: 28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857143; overflow-x: hidden; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; tab-size: 4; background-position: inherit inherit; background-repeat: inherit inherit; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; word-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) { 
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font-family: inherit; font-size: inherit; font-style: inherit; font-variant-caps: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right-width: 0px; background-color: inherit; }
+.CodeMirror-linenumber { }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; position: relative !important; background-position: inherit inherit; background-repeat: inherit inherit; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; background-position: 0px 0px; background-repeat: initial initial; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print { 
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background-color: rgb(204, 204, 204); display: block; overflow-x: hidden; background-position: initial initial; background-repeat: initial initial; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) { 
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background-color: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; background-position: initial initial; background-repeat: initial initial; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; }
+a.md-print-anchor { white-space: pre !important; border: none !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; text-shadow: initial !important; background-position: 0px 0px !important; background-repeat: initial initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
+.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom-width: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background-color: rgb(255, 255, 0); color: rgb(0, 0, 0); background-position: initial initial; background-repeat: initial initial; }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
+@media print { 
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-require-zoom-fix foreignObject { font-size: var(--mermaid-font-zoom); }
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+/* open-sans-regular - latin-ext_latin */
+  /* open-sans-italic - latin-ext_latin */
+    /* open-sans-700 - latin-ext_latin */
+    /* open-sans-700italic - latin-ext_latin */
+  html {
+    font-size: 16px;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+
+/*@media print {
+    .typora-export h1,
+    .typora-export h2 {
+        border-bottom: none;
+        padding-bottom: initial;
+    }
+
+    .typora-export h1::after,
+    .typora-export h2::after {
+        content: "";
+        display: block;
+        height: 100px;
+        margin-top: -96px;
+        border-top: 1px solid #eee;
+    }
+}*/
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #dfe2e5;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border-top: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table th:first-child,
+table td:first-child {
+    margin-top: 0;
+}
+table th:last-child,
+table td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+    background-color: #f3f4f4;
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+    pre {
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+.html-for-mac .context-menu {
+    --item-hover-bg-color: #E6F0FE;
+}
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+ :root {--mermaid-font-zoom:1em ;}  .typora-export li, .typora-export p, .typora-export,  .footnote-line {white-space: normal;} 
+</style>
+</head>
+<body class='typora-export'>
+<div id='write'  class=''><h1><a name="motivation-positive-feedback-loop-learning-by-writing-and-dopamine" class="md-header-anchor"></a><span>Motivation, Positive Feedback Loop, Learning by Writing, and Dopamine</span></h1><p>&nbsp;</p><p><span>Author : </span><a href='https://chuanwang.substack.com/'><span>wang churn</span></a></p><p><span>Source: </span><a href='https://chuanwang.substack.com/p/motivation-positive-feedback-loop'><span>Motivation, Positive Feedback Loop, Learning by Writing, and Dopamine</span></a></p><p>&nbsp;</p><p><span>1.1/ When I was a teenager, for a while I was genuinely interested in math and science. I remember as a 14-year-old, I enjoyed going to my Dad&#39;s lab, tinkering with the only computer there, an Apple II, taking the trouble of going through every page of the manual, and had fun writing programs in BASIC. I did all this out of my own initiative, no one forced me.</span></p><p><span>1.2/ But somehow after I got into college in China, that intense fascination with programming just slowly faded. I was motivated by an external outcome, because that was what everyone else is motivated by. In the late 80s everyone around me wanted to come to America, the land of the free, for graduate school to pursue more opportunities, and studying physics/engineering seemed to be the best way to get a ticket to America.</span></p><p><span>1.3/ The problem with motivation by external reward, is that when you encounter obstacles, you get frustrated, you never enjoy the process as you are solely motivated by that far away goal. You have to brute force your way to overcome that obstacle, it is torture. But it would work, for a while. I was offered the Sproull graduate fellowship by the University of Rochester in the fall of 1991 to study material science.</span></p><p><span>1.4/ Then I slowly realized that science/engineering by itself just did not give me the kind of excitement I used to have. I wanted to become a millionaire in a hurry. In a few years, I came to silicon valley, got a job, just before the Internet revolution was about to take off.</span></p><p><span>1.5/ When you are motivated solely by an external reward, you never take the time to perfect your craft, because you are not interested in the process. If you never obsess about the technology for its own sake, you can never be a great engineer or programmer. If you never obsess about all the nifty-gritty details of how business actually work under the hood, you become just like one of those empty suits parroting the current fashionable BS narratives.</span></p><p><span>1.6/ Invariably you always want to take short cuts to get that external reward now. When the obstacle is too big to overcome, normal shortcut won&#39;t work, people will resort to cheating. The worst kind of cheating, is cheating yourself, convincing yourself that somehow things will just work out, that if you fake it long enough, you would make it, just like everyone else. You never really possess any genuine structural advantage in whatever you are working on, you secretly hope that success will just magically happen if you pretend long enough.</span></p><p><span>1.7/ Many people in the 90s were shaped by the experience from the dot com bubble and the crash after that. I was no different. Life from 1995 to early 2000 was generally exciting, the stock market was always going up, any occasional drawdown was soon bought and market then went on to make new highs. For a few years, I was faking it with everyone else, and it seemed to work well.</span></p><p><span>1.8/ When I was chasing gains in the stock market, I was emulating others, I did not understand how things really worked at the micro level, I just knew that by going down the same path as others before me, it would somehow just work, and for a while it did work really well, Nasdaq index soared seven times from the end of 1994 to March 2000. If it worked effortlessly, why bother to understand why and how it worked?</span></p><p><span>1.9/ The market crash from March 2000 to March 2003 was a humbling experience for many, but different people learned different lessons. For me, the experience was so traumatic that for a few years I automatically associated anything related to high-tech as toxic and bubbelish. I was at a loss at how to go back and rebuild a career. Since I was just in for the $, I hated the process, and I was extremely reluctant to go back to the basics and build a really solid foundation. I had tapped out my mental reserve of brute will power. It felt miserable.</span></p><p><span>2.1/ After the dot com crash I slowly recovered and tried numerous endeavors, most of which eventually turned out to be a gigantic waste of time and resources. I was into real estate speculating before the subprime crisis erupted, things appeared to work really well, and then after 2007, everything just collapsed. People who never experienced September 2008, cannot fathom the kind of desperation, panic and total loss of confidence in the financial market.</span></p><p><span>2.2/ Meanwhile I started to read a lot more books, both online and offline. The amount of information accessible at your finger tips just exploded after Apple unleased the mobile revolution with the iPhone in early 2007.</span></p><p><span>2.3/ One of most famous authors in the tech industry in the 90s was Geoffrey Moore, he wrote a series of interesting books on technology investing: &quot;Crossing the chasm&quot;, &quot;Inside the Tornado&quot;, &quot;The Gorilla Game&quot;, &quot;Living on the fault line&quot;. He came from a pre-Internet enterprise software background, the gist of his thesis was that it’s extremely profitable to identify and invest, in nascent software companies that was about to become the dominant player with a de-facto control over the ecosystem it created.</span></p><p><span>2.4/ In essence, it was a series of long, positive feedback loop that offered huge upside in returns, for investors who understand the underlying mechanism and stay invested with such a company for a long time.</span></p><p><span>2.5/ In hindsight, Microsoft was such a classic example. If you understand the details under the hood, it is a no-brainer. But for people looking from the outside, it always appeared much scarier than it really is. People always fear the company is over-valued, always worry they are too late to the party, always worry that a new comer with a cheaper product and better features would unseat its dominant position.</span></p><p><span>2.6/ As a matter of fact, I would argue that positive feedback loop, is one of the most important concept in the world, not just in investing. Life itself, proteins and RNAs, emerged from auto-catalytic chemical networks, which is a positive feedback loop. Human civilization after Watt&#39;s steam engine just accelerated under one positive feedback loop after another. Nobel prize winner Ilya Prigorgine&#39;s &quot;Far from equilibrium thermodynamics / dissipative structure&quot; theory is a directly result of such positive feedback loops at work.</span></p><p><span>2.7/ These days whenever I see a situation with multiple positive feedback loops at work, I get extremely excited. New breakthrough phenomenon might emerge from such a situation, given enough time.</span></p><p><span>2.8/ But I digress. To make an extremely long and complicated story short, I was able to borrow Geoffrey Moore&#39;s theory from the pre-Internet enterprise software world, and the concept of positive feedback loop, fine tune them to my investing, in several different companies across different industries, and got some decent results.</span></p><p><span>2.9/ And I was having fun during the process. Along the way, I discovered a very important, effective, rewarding and sustainable way to learn: Learning by writing.</span></p><p><span>3.1/ Different people have different styles of learning. Some learn most effectively by listening, some by writing, some by talking, some by a combination of all of those . No one is ever the same ( I strongly encourage everyone to read the essay &quot;Managing yourself&#39; written by Peter Drucker )</span></p><p><span>3.2/ For me, it would be primarily learning by writing. When I write, I force myself to search up for materials down to the very nifty gritty details on a certain subject. In the course of searching for more information, something magically happens: I changed my mental model, and changed my mind on the subject.</span></p><p><span>3.3/ When you analyze a subject based on the mountain of information you have gathered, you quickly realize what you have gotten wrong before. You would have a much much better understanding on the subject than most people outside the field, and by bringing an outside perspective, you would also possess better understanding in certain areas that insiders are not aware of. Human intuition can be unreliable, as the short term working memory of your brain can only accommodate about seven items. But when you write, you lay a lot of information on the table, next to your fingertips, this will help you think much more clearly with much better insight.</span></p><p><span>3.4/ When I write, I choose a subject that has puzzled me for a long time, that it creates a burning sensation for me to go under the hood and figure out how it works. Now this is very important, by choosing a subject based your own interest ( and not imposed by a boss or other outsiders), you have autonomy, you automatically defined a metric to measure progress. Whenever you uncover something that you do not know previously, you feel it immediately, you quench that burning sensation a little bit, you can feel that little dopamine rush, you will be happy and this will keep you motivated to work for more.</span></p><p><span>3.5/ Speaking of human autonomy and its relation to motivation, there are a couple professors from University of Rochester, Edward Deci &amp; Richard Ryan, who are founding fathers of the &quot;Self-Determination Theory&quot;, which spawned a lot of interesting research in this area. It is a shame that I do not read about their theory until almost 30 years later. I might have crossed paths with them on campus in the early 90s without realizing it.</span></p><p><span>3.6/ Dopamine is about “the happiness of pursuit of reward that has a decent chance of happening”. ( Please refer to page 74, of the book &quot;Behave&quot; by Stanford researcher Robert Sapolsky. More discussion on this subject in the next section ) By writing and exploring a subject of your own choosing, you automatically constructing a task that will be of the right difficulty level ( not too easy to feel bored, not too difficult to feel hopeless) that will generate dopamine continuously, keep you motivated, and make real self improvement from that experience.</span></p><p><span>3.7/ Now that is a structural advantage you have, versus people who are outcome focused and just chasing superficial gains. When people just focus on outcomes, they won&#39;t have the motivation to tackle hard problems head on for too long. They may be able to fake the appearance for a while but ultimately when the going gets tough, the whole charade would collapse.</span></p><p><span>3.8/ You won&#39;t have this problem, you are motivated to figure out how things really work, and whatever you eventually figure out, it&#39;s usually something that&#39;s either counter-intuitive or quite nuanced. And when you have the right mental model on something that most people got wrong about, that is a HUGE, HUGE competitive advantage.</span></p><p><span>3.9/ Plus, you learned those concepts through your own writing, which means that you have internalized these ideas and have no problem putting them into action, because it&#39;s almost second nature to you. You are baffled when you met friends who do not understand the concept, since it is so obvious to you. That will be the moment when you realize that you have pulled far ahead of them.</span></p><p><span>3.10/ Besides &quot;positive feedback loop&quot;, I can list at least 30-40 concepts that I learned by extensive reading and writing. These things take time to build, and require you to periodically get out of your comfort zone and expend significant effort. But as you build and accumulate these structural advantages, they will silently compound, and eventually after you have enough of them, you will experience exponential growth at unexpected places in unexpected ways.</span></p><p><span>4.1/ Biologically, we are all, to a large extent, motivated by dopamine. Dopamine is a neurotransmitter secreted by the brain, it was first discovered by British scientist Kathleen Montagu in 1957. Some call it the pleasure molecule, but it is much more nuanced than that.</span></p><p><span>4.2/ Dopamine is about the anticipation of reward, specifically the anticipation of reward that has a reasonable chance of succeeding. If it&#39;s too easy and expected, there is no surprise, it&#39;s not that interesting, no dopamine. If it&#39;s too tough, there is no hope, it becomes depressing, no dopamine.</span></p><p><span>4.3/ Something that fells in the middle, a reward that has a decent chance of materializing, gives us the dopamine rush, and will keep us motivated to take action and move forward. That is one of the reason why Las Vegas never worry about lack of visitors, casinos are masters in manipulating people&#39;s expectation of their chances of winning, and hence dopamine rushes.</span></p><p><span>4.4/ Here&#39;s the thing: something that is novel and exciting today, will feel normal and routine eventually, and the dopamine level will wear off, and things start to feel boring.</span></p><p><span>4.5/ People who are bent on chasing external material rewards face two problems. First, not that many people are lucky enough to reach their goals in a short period of time. An external reward for which one has no way to estimate the time required to reach that goal, won&#39;t be able to produce enough dopamine to motivate people long enough, and when people are no longer motivated, they give up early, or try to take shortcuts that are actually counter productive. Then comes failure, disappointment, and we are back to square one.</span></p><p><span>4.6/ Second, people assume that money or some other end goals would solve all their problems, but once they made enough money or reach their goal, after a few weeks, it feels routine and there will be less and less dopamine, they feel bored and start to look for the next big thing.</span></p><p><span>4.7/ But, here is the problem, if they reach their goal the first time because of luck, not because of a solid set of skills and knowledge, they are unlikely to get lucky so quickly the second time. And as time goes on, failure, disappointments and even depression follows. Do not believe me? search &quot;why do rich people get depressed&quot; online and you will find more detailed answer.</span></p><p><span>4.8/ At least for me, learning by writing, the process itself is intensely interesting, as I get to choose to write a subject that genuinely arouse my curiosity. It will keep me motivated to learn more, regardless of whether there is any short-term external reward.</span></p><p><span>5.1/ It is not possible to unpack everything in detail in a short essay, but reflecting on my own experience, the most important underlying driving force for the positive change is:</span></p><p><span>Fast declining cost and latency (time lag) to search, access/read, write/distribute information. and this can be traced back to Moore&#39;s Law from the semiconductor industry back starting in the 1960s.</span></p><p><span>5.2/ With so much information at your fingertips, you can quickly find out the best of anything out of a global set of choices, you never have to settle for mediocre local choices.</span></p><p><span>5.3/ With low latency, you get faster feedback, genuine feedback that can be independently verified, which can help you overcome fake information and false narratives.</span></p><p><span>5.4/ Empowered by a treasure trove of new information and faster outside feedback, it is a mathematical certainty that you will find new insights and new connections between different ideas. These little &#39;aha moments&#39; will produce tiny dopamine burst inside your brain, that will keep motivating you to learn more. You can continue playing your own game with this positive feedback loop of total innate motivation.</span></p><p><span>5.5/ Besides Geoffrey Moore&#39;s book, here are seven books that had a great impact on me ( and produced huge dopamine burst). They helped me build a better mental model of the world, and put that knowledge into action:</span></p><p><span>1) &quot;Why greatness can not be planned&quot;, by Kenneth Stanley</span></p><p><span>2) &quot;The Cathedral &amp; the Bazaar&quot;, by Eric Raymond</span></p><p><span>3) &quot;Linked&quot;, by Albert-Laszlo Barabasi</span></p><p><span>4) &quot;The Formula: The universal laws of success&quot;, also by Albert-Laszlo Barabasi</span></p><p><span>5) &quot;The Flow&quot;, by Mihaly Csikszentmihalyi</span></p><p><span>6) &quot;Increasing returns and path dependence in the economy&quot;, by Brian Arthur</span></p><p><span>7) &quot;The Art of Impossible&quot;, by Steven Kotler</span></p><p><span>5.6/ I hope this essay can motivate you to read more, learn more effectively by writing more. If you persist long enough and are lucky, you will eventually experience a constant flood of natural dopamine burst that will continue to provide the intense inner drive to propel your career to a whole new level, and you would have fun doing it.</span></p></div>
+</body>
+</html>
