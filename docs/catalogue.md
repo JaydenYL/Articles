@@ -68,7 +68,7 @@
 
 [有哪些典型的「学生思维」？](https://yuliuu.com/Articles/wechat/3-12)
 
-
+[发展一定要有阵痛吗？](https://yuliuu.com/Articles/wechat/painOfDevelopment)
 
 
 
