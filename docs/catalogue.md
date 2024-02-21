@@ -1,6 +1,6 @@
 # [Articles](https://yuliuu.com/Articles)
 
-<small>{ Buried on 20<sup>th</sup> April, 2021 }</small>
+<small>{ Buried on 10<sup>th</sup> April, 2021 }</small>
 
 <br><br>
 
@@ -10,13 +10,11 @@
 
 <br>
 
-##  I  微信公众号文章
-
-
+##  I  公众号
 
 <br>
 
-若是没有时间去啃《精神现象学》这种大部头 ， 不妨看看以下的文章：
+《精神现象学》读书笔记：
 
 [（一）《精神现象学》句读第三卷读书笔记](https://yuliuu.com/Articles/wechat/1st)
 
